@@ -1,0 +1,36 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        process-in-0:
+          group: demo-consumer-group
+          destination: inboundtopic
+          consumer:
+            maxAttempts: 1
+        process-out-0:
+          destination: outboundtopic
+      kafka:
+        bindings:                    
+            process-in-0:  
+                consumer:
+                    enableDlq: true 
+                    dlqName: inboundtopic.dlq
+                    configuration:
+                        isolation.level: read_committed
+        binder:          
+          brokers: kafka
+          defaultBrokerPort: 9092                    
+          minPartitionCount: 1
+          autoCreateTopics: true
+          autoAddPartitions: true            
+          transaction:
+            transactionIdPrefix: tx-
+            transaction.timeout.ms: 900000
+            producer:
+              configuration:
+                retries: 1
+                acks: all
+
+logging:
+  level:
+    org.springframework.kafka.transaction: debug
