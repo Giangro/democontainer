@@ -1,7 +1,15 @@
 spring:
   cloud:
     stream:
+      function.definition: supplier;process;
+      poller:
+          fixedDelay: 1000
+          initialDelay: 1000          
       bindings:
+        supplier-out-0:
+          destination: inboundtopic
+          producer:
+              errorChannelEnabled: true
         process-in-0:
           group: demo-consumer-group
           destination: inboundtopic
@@ -9,6 +17,8 @@ spring:
             maxAttempts: 1
         process-out-0:
           destination: outboundtopic
+          producer:
+              errorChannelEnabled: true
       kafka:
         bindings:                    
             process-in-0:  
@@ -17,6 +27,12 @@ spring:
                     dlqName: inboundtopic.dlq
                     configuration:
                         isolation.level: read_committed
+            process-out-0:    
+                producer:
+                    sync: true                 
+            supplier-out-0:
+                producer:
+                    sync: true                       
         binder:          
           brokers: kafka
           defaultBrokerPort: 9092                    
@@ -28,9 +44,13 @@ spring:
             transaction.timeout.ms: 900000
             producer:
               configuration:
-                retries: 1
+                enable.idempotence: true
+                max.in.flight.requests.per.connection: 5
+                retries: 2147483647
                 acks: all
-
+                max.block.ms: 1000
+                interceptor:
+                    classes: it.poste.democontainer.config.Config$DefaultProducerInterceptor                
 logging:
   level:
     org.springframework.kafka.transaction: debug
