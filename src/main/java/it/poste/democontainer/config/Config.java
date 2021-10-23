@@ -18,6 +18,7 @@ import org.apache.kafka.clients.producer.ProducerInterceptor;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.TopicPartition;
+import org.springframework.cloud.stream.binder.RequeueCurrentMessageException;
 import org.springframework.cloud.stream.binder.kafka.KafkaBindingRebalanceListener;
 import org.springframework.cloud.stream.config.ListenerContainerCustomizer;
 import org.springframework.context.annotation.Bean;
@@ -70,8 +71,8 @@ public class Config {
         // Disable retry in the AfterRollbackProcessor
         return (container, destination, group) -> container.setAfterRollbackProcessor(
                 new DefaultAfterRollbackProcessor<byte[], byte[]>(
-                        (record, exception) -> log.error("Discarding failed record: {}", record),
-                        new FixedBackOff(0L, 0)));
+                        (record, exception) -> log.error("&&&&&&&&&&&&&& Discarding failed record: {}", record),
+                        new FixedBackOff(3L, 3)));
     }
 
     @Bean
@@ -85,9 +86,12 @@ public class Config {
         @Transactional
         String run(String msg) {
             log.info("Received event={}", msg);
+            //int val = messageCounter.get();
+            //if (val == 3)
+            //    throw new RuntimeException("simulate error");
             try {
-                Thread.sleep(6_000);
-            } catch (InterruptedException ex) {
+                Thread.sleep(5_000);
+            } catch (InterruptedException ex) {                
             }
             return msg.toUpperCase();
         }
@@ -96,19 +100,23 @@ public class Config {
     @Bean
     public Supplier<String> supplier() {
         return () -> {
-            log.info("Sending new message");
-            return "Hello World! #" + messageCounter.incrementAndGet();
+            //log.info("Sending new message");
+            int val = messageCounter.incrementAndGet();
+            //if (val == 3)
+            //    throw new RuntimeException("simulate error");
+            return "Hello World! #" + val;            
         };
     }
 
-    @ServiceActivator(inputChannel = "inboundtopic.errors")
+    @ServiceActivator(inputChannel = "outboundtopic.errors")
     public void errorProcessHandler(ErrorMessage em) {
-        log.error("@@@ errorProcessHandler {}", em.toString());
+        log.error("@@@ !!!!! errorProcessHandler {}", em.toString());
+        //throw new RequeueCurrentMessageException("!!!!!!!!!!!!!!!!!! RETRY UNKNOWN PRODUCER ID !!!!!!!!!!!");
     }
 
-    @ServiceActivator(inputChannel = "outboundtopic.errors")
-    public void errorSupplierHandler(ErrorMessage em) {
-        log.error("@@@ errorSupplierHandler {}", em.toString());
+    @ServiceActivator(inputChannel = "inboundtopic.errors")
+    public void errorsSupplierHandler(ErrorMessage em) {
+        log.error("@@@ !!!!! errorSupplierHandler {}", em.toString());
     }
 
     public static class DefaultProducerInterceptor implements ProducerInterceptor<byte[], byte[]> {
@@ -123,13 +131,7 @@ public class Config {
         }
 
         @Override
-        public void onAcknowledgement(RecordMetadata metadata, Exception exception) {
-            if (metadata != null) {
-                System.out.println(metadata);
-            }
-            if (exception != null) {
-                System.out.println(exception);
-            }
+        public void onAcknowledgement(RecordMetadata metadata, Exception exception) {            
         }
 
         @Override

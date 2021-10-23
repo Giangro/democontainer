@@ -1,10 +1,10 @@
 spring:
   cloud:
     stream:
-      function.definition: supplier;process;
+      function.definition: supplier;process
       poller:
-          fixedDelay: 1000
-          initialDelay: 1000          
+          fixedDelay: 10000
+          initialDelay: 2000          
       bindings:
         supplier-out-0:
           destination: inboundtopic
@@ -14,7 +14,7 @@ spring:
           group: demo-consumer-group
           destination: inboundtopic
           consumer:
-            maxAttempts: 1
+            maxAttempts: 3            
         process-out-0:
           destination: outboundtopic
           producer:
@@ -23,16 +23,18 @@ spring:
         bindings:                    
             process-in-0:  
                 consumer:
-                    enableDlq: true 
+                    enableDlq: true
                     dlqName: inboundtopic.dlq
                     configuration:
-                        isolation.level: read_committed
+                        isolation.level: read_committed                        
+                        max.poll.records: 1
+                        max.poll.interval.ms: 180000
             process-out-0:    
                 producer:
                     sync: true                 
             supplier-out-0:
                 producer:
-                    sync: true                       
+                    sync: true                      
         binder:          
           brokers: kafka
           defaultBrokerPort: 9092                    
@@ -41,16 +43,18 @@ spring:
           autoAddPartitions: true            
           transaction:
             transactionIdPrefix: tx-
-            transaction.timeout.ms: 900000
-            producer:
-              configuration:
-                enable.idempotence: true
-                max.in.flight.requests.per.connection: 5
-                retries: 2147483647
-                acks: all
-                max.block.ms: 1000
-                interceptor:
-                    classes: it.poste.democontainer.config.Config$DefaultProducerInterceptor                
+            #transaction.timeout.ms: 900000
+            transaction.timeout.ms: 1000
+            producer:         
+                sync: true
+                configuration:                  
+                  enable.idempotence: true
+                  max.in.flight.requests.per.connection: 5
+                  retries: 100
+                  acks: all
+                  max.block.ms: 1000                
+                  interceptor:
+                      classes: it.poste.democontainer.config.Config$DefaultProducerInterceptor                
 logging:
   level:
     org.springframework.kafka.transaction: debug

@@ -1,0 +1,1073 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< it.poste:democontainer >-----------------------
+[INFO] Building democontainer 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:2.5.5:run (default-cli) > test-compile @ democontainer >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ democontainer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 2 resources
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ democontainer ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\Users\giangr40\Poste Italiane spa\Projects\democontainer\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ democontainer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory C:\Users\giangr40\Poste Italiane spa\Projects\democontainer\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ democontainer ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\Users\giangr40\Poste Italiane spa\Projects\democontainer\target\test-classes
+[INFO] 
+[INFO] <<< spring-boot-maven-plugin:2.5.5:run (default-cli) < test-compile @ democontainer <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.5.5:run (default-cli) @ democontainer ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.5)
+
+2021-10-23 12:37:53.288  INFO 17596 --- [  restartedMain] i.p.d.DemocontainerApplication           : Starting DemocontainerApplication using Java 15 on SCDIRITM1304 with PID 17596 (C:\Users\giangr40\Poste Italiane spa\Projects\democontainer\target\classes started by GIANGR40 in C:\Users\giangr40\Poste Italiane spa\Projects\democontainer)
+2021-10-23 12:37:53.292  INFO 17596 --- [  restartedMain] i.p.d.DemocontainerApplication           : The following profiles are active: prod
+2021-10-23 12:37:53.403  INFO 17596 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-23 12:37:54.848  INFO 17596 --- [  restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-10-23 12:37:54.873  INFO 17596 --- [  restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-10-23 12:37:54.995  INFO 17596 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-23 12:37:55.267  INFO 17596 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-23 12:37:55.270  INFO 17596 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-23 12:37:56.182  INFO 17596 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-23 12:37:56.691  INFO 17596 --- [  restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: kafka
+2021-10-23 12:37:57.079  INFO 17596 --- [  restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: kafka
+2021-10-23 12:37:57.080  INFO 17596 --- [  restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: kafka
+2021-10-23 12:37:57.088  INFO 17596 --- [  restartedMain] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application.process-in-0' has 1 subscriber(s).
+2021-10-23 12:37:57.346  INFO 17596 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-10-23 12:37:57.346  INFO 17596 --- [  restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 1 subscriber(s).
+2021-10-23 12:37:57.347  INFO 17596 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2021-10-23 12:37:57.348  INFO 17596 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : Adding {router} as a subscriber to the 'supplier_integrationflow.channel#0' channel
+2021-10-23 12:37:57.348  INFO 17596 --- [  restartedMain] o.s.integration.channel.DirectChannel    : Channel 'application.supplier_integrationflow.channel#0' has 1 subscriber(s).
+2021-10-23 12:37:57.348  INFO 17596 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : started bean 'supplier_integrationflow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'
+2021-10-23 12:37:57.348  INFO 17596 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : Adding {service-activator:config.errorsSupplierHandler.serviceActivator} as a subscriber to the 'inboundtopic.errors' channel
+2021-10-23 12:37:57.348  INFO 17596 --- [  restartedMain] o.s.integration.channel.DirectChannel    : Channel 'application.inboundtopic.errors' has 1 subscriber(s).
+2021-10-23 12:37:57.349  INFO 17596 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : started bean 'config.errorsSupplierHandler.serviceActivator'
+2021-10-23 12:37:57.350  INFO 17596 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : Adding {service-activator:config.errorProcessHandler.serviceActivator} as a subscriber to the 'outboundtopic.errors' channel
+2021-10-23 12:37:57.350  INFO 17596 --- [  restartedMain] o.s.integration.channel.DirectChannel    : Channel 'application.outboundtopic.errors' has 1 subscriber(s).
+2021-10-23 12:37:57.350  INFO 17596 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : started bean 'config.errorProcessHandler.serviceActivator'
+2021-10-23 12:37:57.351  INFO 17596 --- [  restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: kafka
+2021-10-23 12:37:57.486  INFO 17596 --- [  restartedMain] o.s.c.s.b.k.p.KafkaTopicProvisioner      : Using kafka topic for outbound: inboundtopic
+2021-10-23 12:37:57.492  INFO 17596 --- [  restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [kafka:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-10-23 12:38:00.027  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:38:00.032  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:38:00.032  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634985480019
+2021-10-23 12:38:00.780  INFO 17596 --- [| adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2021-10-23 12:38:00.798  INFO 17596 --- [| adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:38:00.798  INFO 17596 --- [| adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:38:00.798  INFO 17596 --- [| adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:38:00.799  INFO 17596 --- [  restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'unknown.channel.name' has 1 subscriber(s).
+2021-10-23 12:38:00.800  INFO 17596 --- [  restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'unknown.channel.name' has 2 subscriber(s).
+2021-10-23 12:38:00.819  INFO 17596 --- [  restartedMain] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [kafka:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-tx-0
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = [it.poste.democontainer.config.Config$DefaultProducerInterceptor]
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 1000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 100
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = tx-0
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2021-10-23 12:38:00.848  INFO 17596 --- [  restartedMain] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-0, transactionalId=tx-0] Instantiated a transactional producer.
+2021-10-23 12:38:00.883  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:38:00.883  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:38:00.883  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634985480883
+2021-10-23 12:38:00.889  INFO 17596 --- [  restartedMain] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-0, transactionalId=tx-0] Invoking InitProducerId for the first time in order to acquire a producer ID
+2021-10-23 12:38:00.911  INFO 17596 --- [| producer-tx-0] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-tx-0, transactionalId=tx-0] Cluster ID: u8G57YJBQraGWWAiI00F-w
+2021-10-23 12:38:00.914  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-0, transactionalId=tx-0] Discovered transaction coordinator kafka:9092 (id: 1 rack: null)
+2021-10-23 12:38:01.046  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-0, transactionalId=tx-0] ProducerId set to 33014 with epoch 4
+2021-10-23 12:38:01.102  INFO 17596 --- [  restartedMain] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application.supplier-out-0' has 1 subscriber(s).
+2021-10-23 12:38:01.107  INFO 17596 --- [  restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: kafka
+2021-10-23 12:38:01.108  INFO 17596 --- [  restartedMain] o.s.c.s.b.k.p.KafkaTopicProvisioner      : Using kafka topic for outbound: outboundtopic
+2021-10-23 12:38:01.109  INFO 17596 --- [  restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [kafka:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-10-23 12:38:01.130  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:38:01.131  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:38:01.132  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634985481130
+2021-10-23 12:38:01.233  INFO 17596 --- [| adminclient-2] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-2 unregistered
+2021-10-23 12:38:01.237  INFO 17596 --- [| adminclient-2] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:38:01.237  INFO 17596 --- [| adminclient-2] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:38:01.237  INFO 17596 --- [| adminclient-2] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:38:01.238  INFO 17596 --- [  restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'unknown.channel.name' has 1 subscriber(s).
+2021-10-23 12:38:01.238  INFO 17596 --- [  restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'unknown.channel.name' has 2 subscriber(s).
+2021-10-23 12:38:01.243  INFO 17596 --- [  restartedMain] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application.process-out-0' has 1 subscriber(s).
+2021-10-23 12:38:01.248  INFO 17596 --- [  restartedMain] o.s.i.e.SourcePollingChannelAdapter      : started bean 'supplier_integrationflow.org.springframework.integration.config.SourcePollingChannelAdapterFactoryBean#0'
+2021-10-23 12:38:01.250  INFO 17596 --- [  restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: kafka
+2021-10-23 12:38:01.309  INFO 17596 --- [  restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [kafka:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-10-23 12:38:01.317  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:38:01.318  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:38:01.318  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634985481317
+2021-10-23 12:38:01.362  INFO 17596 --- [| adminclient-3] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-3 unregistered
+2021-10-23 12:38:01.367  INFO 17596 --- [| adminclient-3] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:38:01.368  INFO 17596 --- [| adminclient-3] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:38:01.368  INFO 17596 --- [| adminclient-3] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:38:01.378  INFO 17596 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.offset.reset = earliest
+	bootstrap.servers = [kafka:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-demo-consumer-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = demo-consumer-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_committed
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 180000
+	max.poll.records = 1
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2021-10-23 12:38:01.445  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:38:01.445  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:38:01.445  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634985481445
+2021-10-23 12:38:01.460  INFO 17596 --- [  restartedMain] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-demo-consumer-group-1, groupId=demo-consumer-group] Cluster ID: u8G57YJBQraGWWAiI00F-w
+2021-10-23 12:38:01.461  INFO 17596 --- [  restartedMain] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:38:01.462  INFO 17596 --- [  restartedMain] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:38:01.462  INFO 17596 --- [  restartedMain] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:38:01.464  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-demo-consumer-group-1 unregistered
+2021-10-23 12:38:01.513  INFO 17596 --- [  restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'inboundtopic.demo-consumer-group.errors' has 1 subscriber(s).
+2021-10-23 12:38:01.513  INFO 17596 --- [  restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'inboundtopic.demo-consumer-group.errors' has 2 subscriber(s).
+2021-10-23 12:38:01.547  INFO 17596 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.offset.reset = earliest
+	bootstrap.servers = [kafka:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-demo-consumer-group-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = demo-consumer-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_committed
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 180000
+	max.poll.records = 1
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2021-10-23 12:38:01.559  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:38:01.559  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:38:01.559  INFO 17596 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634985481559
+2021-10-23 12:38:01.561  INFO 17596 --- [  restartedMain] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Subscribed to topic(s): inboundtopic
+2021-10-23 12:38:01.567  INFO 17596 --- [  restartedMain] s.i.k.i.KafkaMessageDrivenChannelAdapter : started org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter@6e2a3fe0
+2021-10-23 12:38:01.594  INFO 17596 --- [container-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Cluster ID: u8G57YJBQraGWWAiI00F-w
+2021-10-23 12:38:01.595  INFO 17596 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2021-10-23 12:38:01.600  INFO 17596 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] (Re-)joining group
+2021-10-23 12:38:01.614  INFO 17596 --- [  restartedMain] i.p.d.DemocontainerApplication           : Started DemocontainerApplication in 9.291 seconds (JVM running for 10.576)
+2021-10-23 12:38:01.625  INFO 17596 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] (Re-)joining group
+2021-10-23 12:38:01.632  INFO 17596 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Successfully joined group with generation Generation{generationId=238, memberId='consumer-demo-consumer-group-2-81b9aa18-8484-4ad0-a0cd-c0d9a66c2fc0', protocol='range'}
+2021-10-23 12:38:01.637  INFO 17596 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Finished assignment for group at generation 238: {consumer-demo-consumer-group-2-81b9aa18-8484-4ad0-a0cd-c0d9a66c2fc0=Assignment(partitions=[inboundtopic-0])}
+2021-10-23 12:38:01.649  INFO 17596 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Successfully synced group in generation Generation{generationId=238, memberId='consumer-demo-consumer-group-2-81b9aa18-8484-4ad0-a0cd-c0d9a66c2fc0', protocol='range'}
+2021-10-23 12:38:01.650  INFO 17596 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Notifying assignor about the new Assignment(partitions=[inboundtopic-0])
+2021-10-23 12:38:01.655  INFO 17596 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Adding newly assigned partitions: inboundtopic-0
+2021-10-23 12:38:01.670  INFO 17596 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Setting offset for partition inboundtopic-0 to the committed offset FetchPosition{offset=58292, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:9092 (id: 1 rack: null)], epoch=absent}}
+2021-10-23 12:38:01.671  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : partition assigned = [inboundtopic-0]
+2021-10-23 12:38:01.725  INFO 17596 --- [container-0-C-1] o.a.k.c.consumer.internals.Fetcher       : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Fetch position FetchPosition{offset=58292, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:9092 (id: 1 rack: null)], epoch=absent}} is out of range for partition inboundtopic-0, resetting offset
+2021-10-23 12:38:01.747  INFO 17596 --- [container-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Resetting offset for partition inboundtopic-0 to position FetchPosition{offset=58293, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:9092 (id: 1 rack: null)], epoch=absent}}.
+2021-10-23 12:38:03.378 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:38:03.380  INFO 17596 --- [container-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [kafka:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-tx-demo-consumer-group.inboundtopic.0
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = [it.poste.democontainer.config.Config$DefaultProducerInterceptor]
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 1000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 100
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = tx-demo-consumer-group.inboundtopic.0
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2021-10-23 12:38:03.381  INFO 17596 --- [container-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Instantiated a transactional producer.
+2021-10-23 12:38:03.388  INFO 17596 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:38:03.388  INFO 17596 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:38:03.388  INFO 17596 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634985483388
+2021-10-23 12:38:03.388  INFO 17596 --- [container-0-C-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Invoking InitProducerId for the first time in order to acquire a producer ID
+2021-10-23 12:38:03.401  INFO 17596 --- [.inboundtopic.0] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Cluster ID: u8G57YJBQraGWWAiI00F-w
+2021-10-23 12:38:03.401  INFO 17596 --- [.inboundtopic.0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Discovered transaction coordinator kafka:9092 (id: 1 rack: null)
+2021-10-23 12:38:03.523  INFO 17596 --- [.inboundtopic.0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] ProducerId set to 33012 with epoch 14
+2021-10-23 12:38:03.531 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:38:03.639  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #1
+2021-10-23 12:38:08.732  INFO 17596 --- [.inboundtopic.0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Discovered group coordinator kafka:9092 (id: 1 rack: null)
+2021-10-23 12:38:08.847 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:38:13.384  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:38:13.384  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 13 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:38:13.497 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:38:13.497 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:38:13.498  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #2
+2021-10-23 12:38:18.578 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:38:23.522  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:38:23.524  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 17 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:38:23.680 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:38:23.681 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:38:23.684  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #3
+2021-10-23 12:38:28.710 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:38:33.725  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:38:33.726  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 21 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:38:33.836 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:38:33.836 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:38:33.838  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #4
+2021-10-23 12:38:38.909 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:38:43.864  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:38:43.865  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 25 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:38:43.994 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:38:43.994 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:38:43.996  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #5
+2021-10-23 12:38:49.034 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:38:54.019  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:38:54.019  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 29 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:38:54.129 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:38:54.129 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:38:54.130  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #6
+2021-10-23 12:38:59.174 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:39:04.137  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:39:04.138  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 33 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:39:04.265 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:39:04.266 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:39:04.268  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #7
+2021-10-23 12:39:09.307 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:39:14.273  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:39:14.274  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 37 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:39:14.398 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:39:14.399 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:39:14.401  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #8
+2021-10-23 12:39:19.481 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:39:24.406  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:39:24.407  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 41 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:39:24.516 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:39:24.517 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:39:24.518  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #9
+2021-10-23 12:39:29.558 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:39:34.571  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:39:34.571  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 45 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:39:34.686 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:39:34.686 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:39:34.686  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #10
+2021-10-23 12:39:39.752 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:39:44.708  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:39:44.708  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 49 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:39:44.838 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:39:44.838 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:39:44.840  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #11
+2021-10-23 12:39:49.910 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:39:54.856  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:39:54.856  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 53 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:39:54.983 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:39:54.984 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:39:54.986  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #12
+2021-10-23 12:40:00.088 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:40:05.007  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:40:05.008  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 57 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:40:05.137 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:40:05.139 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:40:05.141  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #13
+2021-10-23 12:40:10.224 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:40:15.169  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:40:15.170  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 61 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:40:15.313 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:40:15.314 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:40:15.322  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #14
+2021-10-23 12:40:20.346 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:40:25.336  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:40:25.337  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 65 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:40:25.455 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:40:25.455 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:40:25.455  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #15
+2021-10-23 12:40:30.529 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:40:35.466  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:40:35.467  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 69 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:40:35.579 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:40:35.580 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:40:35.580  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #16
+2021-10-23 12:40:40.658 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:40:45.608  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:40:45.608  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 73 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:40:45.733 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:40:45.733 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:40:45.733  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #17
+2021-10-23 12:40:50.810 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:40:55.757  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:40:55.759  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 77 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:40:55.886 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:40:55.887 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:40:55.888  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #18
+2021-10-23 12:41:00.962 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:41:05.902  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:41:05.903  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 81 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:41:06.031 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:41:06.032 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:41:06.033  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #19
+2021-10-23 12:41:11.108 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:41:16.054  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:41:16.055  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 85 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:41:16.192 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:41:16.192 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:41:16.194  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #20
+2021-10-23 12:41:21.233 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:41:26.215  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:41:26.216  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 89 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:41:26.349 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:41:26.350 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:41:26.353  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #21
+2021-10-23 12:41:31.436 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:41:36.356  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:41:36.357  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 93 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:41:36.467 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:41:36.467 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:41:36.468  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #22
+2021-10-23 12:41:41.535 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:41:46.491  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:41:46.491  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 97 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:41:46.634 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:41:46.635 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:41:46.637  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #23
+2021-10-23 12:41:51.701 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:41:56.653  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:41:56.653  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 101 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:41:56.780 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:41:56.781 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:41:56.782  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #24
+2021-10-23 12:42:01.860 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:42:06.800  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:42:06.800  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 105 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:42:06.941 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:42:06.942 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:42:06.944  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #25
+2021-10-23 12:42:12.009 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:42:16.956  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:42:16.957  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 109 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:42:17.084 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:42:17.084 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:42:17.086  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #26
+2021-10-23 12:42:22.159 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:42:27.104  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:42:27.104  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 113 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:42:27.242 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:42:27.243 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:42:27.245  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #27
+2021-10-23 12:42:32.330 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:42:37.251  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:42:37.251  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 117 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:42:37.362 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:42:37.362 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:42:37.362  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #28
+2021-10-23 12:42:42.432 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:42:47.385  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:42:47.386  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 121 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:42:47.522 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:42:47.523 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:42:47.525  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #29
+2021-10-23 12:42:52.610 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:42:57.544  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:42:57.545  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 125 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:42:57.673 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:42:57.674 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:42:57.675  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #30
+2021-10-23 12:43:02.705 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:43:07.692  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:43:07.692  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 130 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:43:07.818 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:43:07.819 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:43:07.820  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #31
+2021-10-23 12:43:12.881 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:43:17.845  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:43:17.845  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 134 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:43:17.975 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:43:17.975 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:43:17.977  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #32
+2021-10-23 12:43:23.054 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:43:27.992  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:43:27.992  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 138 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:43:28.117 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:43:28.117 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:43:28.119  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #33
+2021-10-23 12:43:33.143  INFO 17596 --- [.inboundtopic.0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Transiting to abortable error state due to org.apache.kafka.common.errors.UnknownProducerIdException: This exception is raised by the broker if it could not locate the producer metadata associated with the producerId in question. This could happen if, for instance, the producer's records were deleted because their retention time had elapsed. Once the last records of the producerId are removed, the producer's metadata is removed from the broker, and future appends by the producer will return this exception.
+2021-10-23 12:43:33.146  WARN 17596 --- [.inboundtopic.0] o.s.k.core.DefaultKafkaProducerFactory   : Error during some operation; producer removed from cache: CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]
+2021-10-23 12:43:33.146  INFO 17596 --- [.inboundtopic.0] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2021-10-23 12:43:33.146  WARN 17596 --- [.inboundtopic.0] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Overriding close timeout 30000 ms to 0 ms in order to prevent useless blocking due to self-join. This means you have incorrectly invoked close with a non-zero timeout from the producer call-back.
+2021-10-23 12:43:33.146  INFO 17596 --- [.inboundtopic.0] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Proceeding to force close the producer since pending requests could not be completed within timeout 30000 ms.
+2021-10-23 12:43:33.147  INFO 17596 --- [.inboundtopic.0] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:43:33.148  INFO 17596 --- [.inboundtopic.0] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:43:33.148  INFO 17596 --- [.inboundtopic.0] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:43:33.149  INFO 17596 --- [.inboundtopic.0] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-tx-demo-consumer-group.inboundtopic.0 unregistered
+2021-10-23 12:43:33.158  INFO 17596 --- [.inboundtopic.0] o.s.i.h.s.MessagingMethodInvokerHelper   : Overriding default instance of MessageHandlerMethodFactory with provided one.
+2021-10-23 12:43:33.166 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction rollback
+2021-10-23 12:43:33.218 ERROR 17596 --- [container-0-C-1] essageListenerContainer$ListenerConsumer : Transaction rolled back
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener failed; nested exception is org.springframework.messaging.MessageHandlingException: nested exception is org.springframework.kafka.core.KafkaProducerException: Failed to send; nested exception is org.apache.kafka.common.errors.UnknownProducerIdException: This exception is raised by the broker if it could not locate the producer metadata associated with the producerId in question. This could happen if, for instance, the producer's records were deleted because their retention time had elapsed. Once the last records of the producerId are removed, the producer's metadata is removed from the broker, and future appends by the producer will return this exception., failedMessage=GenericMessage [payload=byte[16], headers={kafka_timestampType=CREATE_TIME, kafka_receivedTopic=inboundtopic, target-protocol=kafka, skip-input-type-conversion=false, kafka_offset=58357, scst_nativeHeadersPresent=true, kafka_consumer=org.apache.kafka.clients.consumer.KafkaConsumer@47fd9571, id=55afc1d8-e2e6-40f4-5aa6-7de0db23289f, kafka_receivedPartitionId=0, contentType=application/json, kafka_receivedTimestamp=1634985807972, kafka_groupId=demo-consumer-group, timestamp=1634985813120}]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2387) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2354) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2315) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2229) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.access$2300(KafkaMessageListenerContainer.java:518) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer$3.doInTransactionWithoutResult(KafkaMessageListenerContainer.java:2097) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.transaction.support.TransactionCallbackWithoutResult.doInTransaction(TransactionCallbackWithoutResult.java:36) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeInTransaction(KafkaMessageListenerContainer.java:2088) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListenerInTx(KafkaMessageListenerContainer.java:2057) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2033) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:1709) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1276) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1268) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1163) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: org.springframework.messaging.MessageHandlingException: nested exception is org.springframework.kafka.core.KafkaProducerException: Failed to send; nested exception is org.apache.kafka.common.errors.UnknownProducerIdException: This exception is raised by the broker if it could not locate the producer metadata associated with the producerId in question. This could happen if, for instance, the producer's records were deleted because their retention time had elapsed. Once the last records of the producerId are removed, the producer's metadata is removed from the broker, and future appends by the producer will return this exception.
+	at org.springframework.integration.kafka.outbound.KafkaProducerMessageHandler.handleRequestMessage(KafkaProducerMessageHandler.java:512) ~[spring-integration-kafka-5.5.4.jar:5.5.4]
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:136) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:56) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.cloud.stream.binder.AbstractMessageChannelBinder$SendingHandler.handleMessageInternal(AbstractMessageChannelBinder.java:1056) ~[spring-cloud-stream-3.1.4.jar:3.1.4]
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:56) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:115) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:133) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.dispatch(UnicastingDispatcher.java:106) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:317) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:272) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:187) ~[spring-messaging-5.3.10.jar:5.3.10]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:166) ~[spring-messaging-5.3.10.jar:5.3.10]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:47) ~[spring-messaging-5.3.10.jar:5.3.10]
+	at org.springframework.messaging.core.AbstractDestinationResolvingMessagingTemplate.send(AbstractDestinationResolvingMessagingTemplate.java:72) ~[spring-messaging-5.3.10.jar:5.3.10]
+	at org.springframework.cloud.stream.function.FunctionConfiguration$FunctionToDestinationBinder$1.doSendMessage(FunctionConfiguration.java:611) ~[spring-cloud-stream-3.1.4.jar:3.1.4]
+	at org.springframework.cloud.stream.function.FunctionConfiguration$FunctionToDestinationBinder$1.handleMessageInternal(FunctionConfiguration.java:594) ~[spring-cloud-stream-3.1.4.jar:3.1.4]
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:56) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:115) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:133) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.dispatch(UnicastingDispatcher.java:106) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:317) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:272) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:187) ~[spring-messaging-5.3.10.jar:5.3.10]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:166) ~[spring-messaging-5.3.10.jar:5.3.10]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:47) ~[spring-messaging-5.3.10.jar:5.3.10]
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:109) ~[spring-messaging-5.3.10.jar:5.3.10]
+	at org.springframework.integration.endpoint.MessageProducerSupport.sendMessage(MessageProducerSupport.java:208) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter.sendMessageIfAny(KafkaMessageDrivenChannelAdapter.java:398) ~[spring-integration-kafka-5.5.4.jar:5.5.4]
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter.access$300(KafkaMessageDrivenChannelAdapter.java:79) ~[spring-integration-kafka-5.5.4.jar:5.5.4]
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter$IntegrationRecordMessageListener.onMessage(KafkaMessageDrivenChannelAdapter.java:457) ~[spring-integration-kafka-5.5.4.jar:5.5.4]
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter$IntegrationRecordMessageListener.onMessage(KafkaMessageDrivenChannelAdapter.java:431) ~[spring-integration-kafka-5.5.4.jar:5.5.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2334) ~[spring-kafka-2.7.7.jar:2.7.7]
+	... 16 common frames omitted
+Caused by: org.springframework.kafka.core.KafkaProducerException: Failed to send; nested exception is org.apache.kafka.common.errors.UnknownProducerIdException: This exception is raised by the broker if it could not locate the producer metadata associated with the producerId in question. This could happen if, for instance, the producer's records were deleted because their retention time had elapsed. Once the last records of the producerId are removed, the producer's metadata is removed from the broker, and future appends by the producer will return this exception.
+	at org.springframework.kafka.core.KafkaTemplate.lambda$buildCallback$4(KafkaTemplate.java:620) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.core.DefaultKafkaProducerFactory$CloseSafeProducer$1.onCompletion(DefaultKafkaProducerFactory.java:872) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.apache.kafka.clients.producer.KafkaProducer$InterceptorCallback.onCompletion(KafkaProducer.java:1366) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.ProducerBatch.completeFutureAndFireCallbacks(ProducerBatch.java:231) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.ProducerBatch.done(ProducerBatch.java:197) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.failBatch(Sender.java:690) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.failBatch(Sender.java:676) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.completeBatch(Sender.java:634) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.handleProduceResponse(Sender.java:568) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.lambda$sendProduceRequest$0(Sender.java:757) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.ClientResponse.onComplete(ClientResponse.java:109) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.completeResponses(NetworkClient.java:586) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:578) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:325) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:240) ~[kafka-clients-2.7.1.jar:na]
+	... 1 common frames omitted
+Caused by: org.apache.kafka.common.errors.UnknownProducerIdException: This exception is raised by the broker if it could not locate the producer metadata associated with the producerId in question. This could happen if, for instance, the producer's records were deleted because their retention time had elapsed. Once the last records of the producerId are removed, the producer's metadata is removed from the broker, and future appends by the producer will return this exception.
+
+2021-10-23 12:43:33.228 ERROR 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : &&&&&&&&&&&&&& Discarding failed record: ConsumerRecord(topic = inboundtopic, partition = 0, leaderEpoch = 0, offset = 58357, CreateTime = 1634985807972, serialized key size = -1, serialized value size = 16, headers = RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key = null, value = [B@3bec8951)
+2021-10-23 12:43:33.252 ERROR 17596 --- [.inboundtopic.0] it.poste.democontainer.config.Config     : @@@ !!!!! errorProcessHandler ErrorMessage [payload=org.springframework.integration.kafka.support.KafkaSendFailureException: nested exception is org.springframework.kafka.core.KafkaProducerException: Failed to send; nested exception is org.apache.kafka.common.errors.UnknownProducerIdException: This exception is raised by the broker if it could not locate the producer metadata associated with the producerId in question. This could happen if, for instance, the producer's records were deleted because their retention time had elapsed. Once the last records of the producerId are removed, the producer's metadata is removed from the broker, and future appends by the producer will return this exception., failedMessage=GenericMessage [payload=byte[16], headers={kafka_timestampType=CREATE_TIME, kafka_receivedTopic=inboundtopic, target-protocol=kafka, skip-input-type-conversion=false, kafka_offset=58357, scst_nativeHeadersPresent=true, kafka_consumer=org.apache.kafka.clients.consumer.KafkaConsumer@47fd9571, id=55afc1d8-e2e6-40f4-5aa6-7de0db23289f, kafka_receivedPartitionId=0, contentType=application/json, kafka_receivedTimestamp=1634985807972, kafka_groupId=demo-consumer-group, timestamp=1634985813120}] [record=ProducerRecord(topic=outboundtopic, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = skip-input-type-conversion, value = [102, 97, 108, 115, 101]), RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = spring_json_header_types, value = [123, 34, 115, 107, 105, 112, 45, 105, 110, 112, 117, 116, 45, 116, 121, 112, 101, 45, 99, 111, 110, 118, 101, 114, 115, 105, 111, 110, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 66, 111, 111, 108, 101, 97, 110, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@6f83fa49, timestamp=null)], headers={id=089fdb27-8316-def4-46eb-cab718ca38a1, timestamp=1634985813153}]
+2021-10-23 12:43:33.254 ERROR 17596 --- [.inboundtopic.0] o.s.integration.handler.LoggingHandler   : org.springframework.integration.kafka.support.KafkaSendFailureException: nested exception is org.springframework.kafka.core.KafkaProducerException: Failed to send; nested exception is org.apache.kafka.common.errors.UnknownProducerIdException: This exception is raised by the broker if it could not locate the producer metadata associated with the producerId in question. This could happen if, for instance, the producer's records were deleted because their retention time had elapsed. Once the last records of the producerId are removed, the producer's metadata is removed from the broker, and future appends by the producer will return this exception., failedMessage=GenericMessage [payload=byte[16], headers={kafka_timestampType=CREATE_TIME, kafka_receivedTopic=inboundtopic, target-protocol=kafka, skip-input-type-conversion=false, kafka_offset=58357, scst_nativeHeadersPresent=true, kafka_consumer=org.apache.kafka.clients.consumer.KafkaConsumer@47fd9571, id=55afc1d8-e2e6-40f4-5aa6-7de0db23289f, kafka_receivedPartitionId=0, contentType=application/json, kafka_receivedTimestamp=1634985807972, kafka_groupId=demo-consumer-group, timestamp=1634985813120}] [record=ProducerRecord(topic=outboundtopic, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = skip-input-type-conversion, value = [102, 97, 108, 115, 101]), RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = spring_json_header_types, value = [123, 34, 115, 107, 105, 112, 45, 105, 110, 112, 117, 116, 45, 116, 121, 112, 101, 45, 99, 111, 110, 118, 101, 114, 115, 105, 111, 110, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 66, 111, 111, 108, 101, 97, 110, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@6f83fa49, timestamp=null)]
+	at org.springframework.integration.kafka.outbound.KafkaProducerMessageHandler$1.onFailure(KafkaProducerMessageHandler.java:666)
+	at org.springframework.util.concurrent.ListenableFutureCallbackRegistry.notifyFailure(ListenableFutureCallbackRegistry.java:86)
+	at org.springframework.util.concurrent.ListenableFutureCallbackRegistry.failure(ListenableFutureCallbackRegistry.java:158)
+	at org.springframework.util.concurrent.ListenableFutureTask.done(ListenableFutureTask.java:100)
+	at org.springframework.util.concurrent.SettableListenableFuture$SettableTask.done(SettableListenableFuture.java:175)
+	at java.base/java.util.concurrent.FutureTask.finishCompletion(FutureTask.java:381)
+	at java.base/java.util.concurrent.FutureTask.setException(FutureTask.java:250)
+	at org.springframework.util.concurrent.SettableListenableFuture$SettableTask.setExceptionResult(SettableListenableFuture.java:163)
+	at org.springframework.util.concurrent.SettableListenableFuture.setException(SettableListenableFuture.java:70)
+	at org.springframework.kafka.core.KafkaTemplate.lambda$buildCallback$4(KafkaTemplate.java:620)
+	at org.springframework.kafka.core.DefaultKafkaProducerFactory$CloseSafeProducer$1.onCompletion(DefaultKafkaProducerFactory.java:872)
+	at org.apache.kafka.clients.producer.KafkaProducer$InterceptorCallback.onCompletion(KafkaProducer.java:1366)
+	at org.apache.kafka.clients.producer.internals.ProducerBatch.completeFutureAndFireCallbacks(ProducerBatch.java:231)
+	at org.apache.kafka.clients.producer.internals.ProducerBatch.done(ProducerBatch.java:197)
+	at org.apache.kafka.clients.producer.internals.Sender.failBatch(Sender.java:690)
+	at org.apache.kafka.clients.producer.internals.Sender.failBatch(Sender.java:676)
+	at org.apache.kafka.clients.producer.internals.Sender.completeBatch(Sender.java:634)
+	at org.apache.kafka.clients.producer.internals.Sender.handleProduceResponse(Sender.java:568)
+	at org.apache.kafka.clients.producer.internals.Sender.lambda$sendProduceRequest$0(Sender.java:757)
+	at org.apache.kafka.clients.ClientResponse.onComplete(ClientResponse.java:109)
+	at org.apache.kafka.clients.NetworkClient.completeResponses(NetworkClient.java:586)
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:578)
+	at org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:325)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:240)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.springframework.kafka.core.KafkaProducerException: Failed to send; nested exception is org.apache.kafka.common.errors.UnknownProducerIdException: This exception is raised by the broker if it could not locate the producer metadata associated with the producerId in question. This could happen if, for instance, the producer's records were deleted because their retention time had elapsed. Once the last records of the producerId are removed, the producer's metadata is removed from the broker, and future appends by the producer will return this exception.
+	... 16 more
+Caused by: org.apache.kafka.common.errors.UnknownProducerIdException: This exception is raised by the broker if it could not locate the producer metadata associated with the producerId in question. This could happen if, for instance, the producer's records were deleted because their retention time had elapsed. Once the last records of the producerId are removed, the producer's metadata is removed from the broker, and future appends by the producer will return this exception.
+
+2021-10-23 12:43:33.255 ERROR 17596 --- [.inboundtopic.0] o.s.k.support.LoggingProducerListener    : Exception thrown when sending a message with key='null' and payload='byte[16]' to topic outboundtopic:
+
+org.apache.kafka.common.errors.UnknownProducerIdException: This exception is raised by the broker if it could not locate the producer metadata associated with the producerId in question. This could happen if, for instance, the producer's records were deleted because their retention time had elapsed. Once the last records of the producerId are removed, the producer's metadata is removed from the broker, and future appends by the producer will return this exception.
+
+2021-10-23 12:43:38.123  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:43:38.123  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 142 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:43:38.234 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:43:38.235  INFO 17596 --- [container-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [kafka:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-tx-demo-consumer-group.inboundtopic.0
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = [it.poste.democontainer.config.Config$DefaultProducerInterceptor]
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 1000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 100
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = tx-demo-consumer-group.inboundtopic.0
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2021-10-23 12:43:38.235  INFO 17596 --- [container-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Instantiated a transactional producer.
+2021-10-23 12:43:40.496  INFO 17596 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:43:40.496  INFO 17596 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:43:40.496  INFO 17596 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634985820495
+2021-10-23 12:43:40.496  INFO 17596 --- [container-0-C-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Invoking InitProducerId for the first time in order to acquire a producer ID
+2021-10-23 12:43:40.509  INFO 17596 --- [.inboundtopic.0] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Cluster ID: u8G57YJBQraGWWAiI00F-w
+2021-10-23 12:43:40.510  INFO 17596 --- [.inboundtopic.0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Discovered transaction coordinator kafka:9092 (id: 1 rack: null)
+2021-10-23 12:43:40.732  INFO 17596 --- [.inboundtopic.0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] ProducerId set to 33012 with epoch 16
+2021-10-23 12:43:40.732 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@7985535]]
+2021-10-23 12:43:40.733  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #34
+2021-10-23 12:43:45.800  INFO 17596 --- [.inboundtopic.0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Discovered group coordinator kafka:9092 (id: 1 rack: null)
+2021-10-23 12:43:45.909 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:43:48.254  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:43:48.255  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 146 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:43:48.383 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:43:48.384 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@7985535]]
+2021-10-23 12:43:48.385  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #35
+2021-10-23 12:43:53.409 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:43:58.388  INFO 17596 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:43:58.389  WARN 17596 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 150 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:43:58.501 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:43:58.502 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@7985535]]
+2021-10-23 12:43:58.503  INFO 17596 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #36
+2021-10-23 12:44:03.564 DEBUG 17596 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:44:06.398  INFO 17596 --- [container-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2021-10-23 12:44:06.405  INFO 17596 --- [container-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:44:06.407  INFO 17596 --- [container-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:44:06.407  INFO 17596 --- [container-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:44:06.408  INFO 17596 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-tx-demo-consumer-group.inboundtopic.0 unregistered
+2021-10-23 12:44:06.409  INFO 17596 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Revoke previously assigned partitions inboundtopic-0
+2021-10-23 12:44:06.410  INFO 17596 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Member consumer-demo-consumer-group-2-81b9aa18-8484-4ad0-a0cd-c0d9a66c2fc0 sending LeaveGroup request to coordinator kafka:9092 (id: 2147483646 rack: null) due to the consumer is being closed
+2021-10-23 12:44:06.422  INFO 17596 --- [container-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:44:06.422  INFO 17596 --- [container-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:44:06.422  INFO 17596 --- [container-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:44:06.427  INFO 17596 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-demo-consumer-group-2 unregistered
+2021-10-23 12:44:06.428  INFO 17596 --- [container-0-C-1] essageListenerContainer$ListenerConsumer : demo-consumer-group: Consumer stopped
+2021-10-23 12:44:06.430  INFO 17596 --- [ionShutdownHook] s.i.k.i.KafkaMessageDrivenChannelAdapter : stopped org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter@6e2a3fe0
+2021-10-23 12:44:06.442  INFO 17596 --- [ionShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application.inboundtopic.demo-consumer-group.errors' has 1 subscriber(s).
+2021-10-23 12:44:06.443  INFO 17596 --- [ionShutdownHook] o.s.i.e.SourcePollingChannelAdapter      : stopped bean 'supplier_integrationflow.org.springframework.integration.config.SourcePollingChannelAdapterFactoryBean#0'
+2021-10-23 12:44:06.444  INFO 17596 --- [ionShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-0, transactionalId=tx-0] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2021-10-23 12:44:06.447  INFO 17596 --- [ionShutdownHook] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:44:06.448  INFO 17596 --- [ionShutdownHook] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:44:06.448  INFO 17596 --- [ionShutdownHook] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:44:06.448  INFO 17596 --- [ionShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-tx-0 unregistered
+2021-10-23 12:44:06.449  INFO 17596 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-10-23 12:44:06.449  INFO 17596 --- [ionShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 0 subscriber(s).
+2021-10-23 12:44:06.449  INFO 17596 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2021-10-23 12:44:06.449  INFO 17596 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {router} as a subscriber to the 'supplier_integrationflow.channel#0' channel
+2021-10-23 12:44:06.449  INFO 17596 --- [ionShutdownHook] o.s.integration.channel.DirectChannel    : Channel 'application.supplier_integrationflow.channel#0' has 0 subscriber(s).
+2021-10-23 12:44:06.449  INFO 17596 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean 'supplier_integrationflow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'
+2021-10-23 12:44:06.449  INFO 17596 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {service-activator:config.errorsSupplierHandler.serviceActivator} as a subscriber to the 'inboundtopic.errors' channel
+2021-10-23 12:44:06.450  INFO 17596 --- [ionShutdownHook] o.s.integration.channel.DirectChannel    : Channel 'application.inboundtopic.errors' has 0 subscriber(s).
+2021-10-23 12:44:06.450  INFO 17596 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean 'config.errorsSupplierHandler.serviceActivator'
+2021-10-23 12:44:06.450  INFO 17596 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {service-activator:config.errorProcessHandler.serviceActivator} as a subscriber to the 'outboundtopic.errors' channel
+2021-10-23 12:44:06.450  INFO 17596 --- [ionShutdownHook] o.s.integration.channel.DirectChannel    : Channel 'application.outboundtopic.errors' has 0 subscriber(s).
+2021-10-23 12:44:06.450  INFO 17596 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean 'config.errorProcessHandler.serviceActivator'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  06:32 min
+[INFO] Finished at: 2021-10-23T12:44:06+02:00
+[INFO] ------------------------------------------------------------------------

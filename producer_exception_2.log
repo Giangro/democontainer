@@ -1,0 +1,638 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< it.poste:democontainer >-----------------------
+[INFO] Building democontainer 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:2.5.5:run (default-cli) > test-compile @ democontainer >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ democontainer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 2 resources
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ democontainer ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\Users\giangr40\Poste Italiane spa\Projects\democontainer\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ democontainer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory C:\Users\giangr40\Poste Italiane spa\Projects\democontainer\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ democontainer ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\Users\giangr40\Poste Italiane spa\Projects\democontainer\target\test-classes
+[INFO] 
+[INFO] <<< spring-boot-maven-plugin:2.5.5:run (default-cli) < test-compile @ democontainer <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.5.5:run (default-cli) @ democontainer ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.5)
+
+2021-10-23 12:46:29.237  INFO 51072 --- [  restartedMain] i.p.d.DemocontainerApplication           : Starting DemocontainerApplication using Java 15 on SCDIRITM1304 with PID 51072 (C:\Users\giangr40\Poste Italiane spa\Projects\democontainer\target\classes started by GIANGR40 in C:\Users\giangr40\Poste Italiane spa\Projects\democontainer)
+2021-10-23 12:46:29.243  INFO 51072 --- [  restartedMain] i.p.d.DemocontainerApplication           : The following profiles are active: prod
+2021-10-23 12:46:29.378  INFO 51072 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-23 12:46:30.749  INFO 51072 --- [  restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-10-23 12:46:30.776  INFO 51072 --- [  restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-10-23 12:46:30.920  INFO 51072 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-23 12:46:31.235  INFO 51072 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-23 12:46:31.238  INFO 51072 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-23 12:46:32.079  INFO 51072 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-23 12:46:32.595  INFO 51072 --- [  restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: kafka
+2021-10-23 12:46:33.028  INFO 51072 --- [  restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: kafka
+2021-10-23 12:46:33.028  INFO 51072 --- [  restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: kafka
+2021-10-23 12:46:33.035  INFO 51072 --- [  restartedMain] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application.process-in-0' has 1 subscriber(s).
+2021-10-23 12:46:33.313  INFO 51072 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-10-23 12:46:33.313  INFO 51072 --- [  restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 1 subscriber(s).
+2021-10-23 12:46:33.314  INFO 51072 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2021-10-23 12:46:33.314  INFO 51072 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : Adding {router} as a subscriber to the 'supplier_integrationflow.channel#0' channel
+2021-10-23 12:46:33.315  INFO 51072 --- [  restartedMain] o.s.integration.channel.DirectChannel    : Channel 'application.supplier_integrationflow.channel#0' has 1 subscriber(s).
+2021-10-23 12:46:33.315  INFO 51072 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : started bean 'supplier_integrationflow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'
+2021-10-23 12:46:33.315  INFO 51072 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : Adding {service-activator:config.errorsSupplierHandler.serviceActivator} as a subscriber to the 'inboundtopic.errors' channel
+2021-10-23 12:46:33.315  INFO 51072 --- [  restartedMain] o.s.integration.channel.DirectChannel    : Channel 'application.inboundtopic.errors' has 1 subscriber(s).
+2021-10-23 12:46:33.315  INFO 51072 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : started bean 'config.errorsSupplierHandler.serviceActivator'
+2021-10-23 12:46:33.315  INFO 51072 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : Adding {service-activator:config.errorProcessHandler.serviceActivator} as a subscriber to the 'outboundtopic.errors' channel
+2021-10-23 12:46:33.315  INFO 51072 --- [  restartedMain] o.s.integration.channel.DirectChannel    : Channel 'application.outboundtopic.errors' has 1 subscriber(s).
+2021-10-23 12:46:33.315  INFO 51072 --- [  restartedMain] o.s.i.endpoint.EventDrivenConsumer       : started bean 'config.errorProcessHandler.serviceActivator'
+2021-10-23 12:46:33.316  INFO 51072 --- [  restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: kafka
+2021-10-23 12:46:33.464  INFO 51072 --- [  restartedMain] o.s.c.s.b.k.p.KafkaTopicProvisioner      : Using kafka topic for outbound: inboundtopic
+2021-10-23 12:46:33.470  INFO 51072 --- [  restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [kafka:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-10-23 12:46:36.107  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:46:36.109  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:46:36.109  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634985996104
+2021-10-23 12:46:36.831  INFO 51072 --- [| adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2021-10-23 12:46:36.841  INFO 51072 --- [| adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:46:36.841  INFO 51072 --- [| adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:46:36.842  INFO 51072 --- [| adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:46:36.842  INFO 51072 --- [  restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'unknown.channel.name' has 1 subscriber(s).
+2021-10-23 12:46:36.842  INFO 51072 --- [  restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'unknown.channel.name' has 2 subscriber(s).
+2021-10-23 12:46:36.863  INFO 51072 --- [  restartedMain] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [kafka:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-tx-0
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = [it.poste.democontainer.config.Config$DefaultProducerInterceptor]
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 1000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 100
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = tx-0
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2021-10-23 12:46:36.893  INFO 51072 --- [  restartedMain] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-0, transactionalId=tx-0] Instantiated a transactional producer.
+2021-10-23 12:46:36.922  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:46:36.922  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:46:36.922  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634985996922
+2021-10-23 12:46:36.929  INFO 51072 --- [  restartedMain] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-0, transactionalId=tx-0] Invoking InitProducerId for the first time in order to acquire a producer ID
+2021-10-23 12:46:36.955  INFO 51072 --- [| producer-tx-0] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-tx-0, transactionalId=tx-0] Cluster ID: u8G57YJBQraGWWAiI00F-w
+2021-10-23 12:46:36.958  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-0, transactionalId=tx-0] Discovered transaction coordinator kafka:9092 (id: 1 rack: null)
+2021-10-23 12:46:37.074  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-0, transactionalId=tx-0] ProducerId set to 33014 with epoch 5
+2021-10-23 12:46:37.098  INFO 51072 --- [  restartedMain] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application.supplier-out-0' has 1 subscriber(s).
+2021-10-23 12:46:37.101  INFO 51072 --- [  restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: kafka
+2021-10-23 12:46:37.102  INFO 51072 --- [  restartedMain] o.s.c.s.b.k.p.KafkaTopicProvisioner      : Using kafka topic for outbound: outboundtopic
+2021-10-23 12:46:37.103  INFO 51072 --- [  restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [kafka:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-10-23 12:46:37.113  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:46:37.113  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:46:37.113  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634985997112
+2021-10-23 12:46:37.157  INFO 51072 --- [| adminclient-2] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-2 unregistered
+2021-10-23 12:46:37.163  INFO 51072 --- [| adminclient-2] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:46:37.163  INFO 51072 --- [| adminclient-2] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:46:37.163  INFO 51072 --- [| adminclient-2] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:46:37.164  INFO 51072 --- [  restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'unknown.channel.name' has 1 subscriber(s).
+2021-10-23 12:46:37.164  INFO 51072 --- [  restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'unknown.channel.name' has 2 subscriber(s).
+2021-10-23 12:46:37.172  INFO 51072 --- [  restartedMain] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application.process-out-0' has 1 subscriber(s).
+2021-10-23 12:46:37.177  INFO 51072 --- [  restartedMain] o.s.i.e.SourcePollingChannelAdapter      : started bean 'supplier_integrationflow.org.springframework.integration.config.SourcePollingChannelAdapterFactoryBean#0'
+2021-10-23 12:46:37.178  INFO 51072 --- [  restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: kafka
+2021-10-23 12:46:37.228  INFO 51072 --- [  restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [kafka:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-10-23 12:46:37.236  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:46:37.237  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:46:37.237  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634985997236
+2021-10-23 12:46:37.282  INFO 51072 --- [| adminclient-3] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-3 unregistered
+2021-10-23 12:46:37.285  INFO 51072 --- [| adminclient-3] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:46:37.286  INFO 51072 --- [| adminclient-3] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:46:37.286  INFO 51072 --- [| adminclient-3] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:46:37.298  INFO 51072 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.offset.reset = earliest
+	bootstrap.servers = [kafka:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-demo-consumer-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = demo-consumer-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_committed
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 180000
+	max.poll.records = 1
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2021-10-23 12:46:37.368  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:46:37.368  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:46:37.368  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634985997368
+2021-10-23 12:46:37.384  INFO 51072 --- [  restartedMain] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-demo-consumer-group-1, groupId=demo-consumer-group] Cluster ID: u8G57YJBQraGWWAiI00F-w
+2021-10-23 12:46:37.386  INFO 51072 --- [  restartedMain] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:46:37.387  INFO 51072 --- [  restartedMain] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:46:37.387  INFO 51072 --- [  restartedMain] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:46:37.390  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-demo-consumer-group-1 unregistered
+2021-10-23 12:46:37.428  INFO 51072 --- [  restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'inboundtopic.demo-consumer-group.errors' has 1 subscriber(s).
+2021-10-23 12:46:37.428  INFO 51072 --- [  restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'inboundtopic.demo-consumer-group.errors' has 2 subscriber(s).
+2021-10-23 12:46:37.454  INFO 51072 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.offset.reset = earliest
+	bootstrap.servers = [kafka:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-demo-consumer-group-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = demo-consumer-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_committed
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 180000
+	max.poll.records = 1
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2021-10-23 12:46:37.464  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:46:37.464  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:46:37.464  INFO 51072 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634985997464
+2021-10-23 12:46:37.466  INFO 51072 --- [  restartedMain] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Subscribed to topic(s): inboundtopic
+2021-10-23 12:46:37.471  INFO 51072 --- [  restartedMain] s.i.k.i.KafkaMessageDrivenChannelAdapter : started org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter@3b55c3dc
+2021-10-23 12:46:37.503  INFO 51072 --- [container-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Cluster ID: u8G57YJBQraGWWAiI00F-w
+2021-10-23 12:46:37.503  INFO 51072 --- [  restartedMain] i.p.d.DemocontainerApplication           : Started DemocontainerApplication in 9.348 seconds (JVM running for 10.566)
+2021-10-23 12:46:37.505  INFO 51072 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+2021-10-23 12:46:37.508  INFO 51072 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] (Re-)joining group
+2021-10-23 12:46:37.539  INFO 51072 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] (Re-)joining group
+2021-10-23 12:46:37.548  INFO 51072 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Successfully joined group with generation Generation{generationId=240, memberId='consumer-demo-consumer-group-2-7ad35c76-abd4-4612-8811-4f395bed2682', protocol='range'}
+2021-10-23 12:46:37.553  INFO 51072 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Finished assignment for group at generation 240: {consumer-demo-consumer-group-2-7ad35c76-abd4-4612-8811-4f395bed2682=Assignment(partitions=[inboundtopic-0])}
+2021-10-23 12:46:37.569  INFO 51072 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Successfully synced group in generation Generation{generationId=240, memberId='consumer-demo-consumer-group-2-7ad35c76-abd4-4612-8811-4f395bed2682', protocol='range'}
+2021-10-23 12:46:37.570  INFO 51072 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Notifying assignor about the new Assignment(partitions=[inboundtopic-0])
+2021-10-23 12:46:37.575  INFO 51072 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Adding newly assigned partitions: inboundtopic-0
+2021-10-23 12:46:37.590  INFO 51072 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Setting offset for partition inboundtopic-0 to the committed offset FetchPosition{offset=58364, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:9092 (id: 1 rack: null)], epoch=absent}}
+2021-10-23 12:46:37.591  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : partition assigned = [inboundtopic-0]
+2021-10-23 12:46:37.632  INFO 51072 --- [container-0-C-1] o.a.k.c.consumer.internals.Fetcher       : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Fetch position FetchPosition{offset=58364, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:9092 (id: 1 rack: null)], epoch=absent}} is out of range for partition inboundtopic-0, resetting offset
+2021-10-23 12:46:37.643  INFO 51072 --- [container-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Resetting offset for partition inboundtopic-0 to position FetchPosition{offset=58365, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:9092 (id: 1 rack: null)], epoch=absent}}.
+2021-10-23 12:46:39.350 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:46:39.353  INFO 51072 --- [container-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [kafka:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-tx-demo-consumer-group.inboundtopic.0
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = [it.poste.democontainer.config.Config$DefaultProducerInterceptor]
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 1000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 100
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = tx-demo-consumer-group.inboundtopic.0
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2021-10-23 12:46:39.355  INFO 51072 --- [container-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Instantiated a transactional producer.
+2021-10-23 12:46:39.364  INFO 51072 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:46:39.364  INFO 51072 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:46:39.364  INFO 51072 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634985999364
+2021-10-23 12:46:39.364  INFO 51072 --- [container-0-C-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Invoking InitProducerId for the first time in order to acquire a producer ID
+2021-10-23 12:46:39.379  INFO 51072 --- [.inboundtopic.0] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Cluster ID: u8G57YJBQraGWWAiI00F-w
+2021-10-23 12:46:39.380  INFO 51072 --- [.inboundtopic.0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Discovered transaction coordinator kafka:9092 (id: 1 rack: null)
+2021-10-23 12:46:39.502  INFO 51072 --- [.inboundtopic.0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] ProducerId set to 33012 with epoch 17
+2021-10-23 12:46:39.511 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:46:39.626  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #1
+2021-10-23 12:46:44.672  INFO 51072 --- [.inboundtopic.0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Discovered group coordinator kafka:9092 (id: 1 rack: null)
+2021-10-23 12:46:44.779 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:46:49.356  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:46:49.357  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 13 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:46:49.483 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:46:49.483 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:46:49.485  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #2
+2021-10-23 12:46:54.553 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:46:59.488  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:46:59.489  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 17 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:46:59.611 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:46:59.612 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:46:59.613  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #3
+2021-10-23 12:47:04.689 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:47:09.632  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:47:09.634  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 21 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:47:09.749 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:47:09.749 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:47:09.750  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #4
