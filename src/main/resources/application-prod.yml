@@ -1,7 +1,7 @@
 app:
     schedule:
-        fixedDelay: 10000
-        initialDelay: 30000
+        fixedDelay: 60000
+        initialDelay: 15000
 management:
     endpoint:
         health:

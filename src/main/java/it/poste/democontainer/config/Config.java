@@ -5,9 +5,9 @@
  */
 package it.poste.democontainer.config;
 
+import it.poste.democontainer.service.ConsumerForProducerTransactionService;
 import java.util.Collection;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Function;
 import javax.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
@@ -27,9 +27,7 @@ import org.springframework.kafka.listener.DefaultAfterRollbackProcessor;
 import org.springframework.messaging.support.ErrorMessage;
 import org.springframework.retry.annotation.EnableRetry;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.backoff.FixedBackOff;
 
 /**
@@ -71,41 +69,18 @@ public class Config {
         // Disable retry in the AfterRollbackProcessor
         return (container, destination, group) -> container.setAfterRollbackProcessor(
                 new DefaultAfterRollbackProcessor<byte[], byte[]>(
-                        (record, exception) -> log.error("&&&&&&&&&&&&&& Discarding failed record: {}", record),
+                        (record, exception) -> log.error("Discarding failed record: {}", record),
                         new FixedBackOff(3L, 3)));
-    }
-
-    @Bean
-    public Function<String, String> process(TxCode txCode) {
-        return msg -> txCode.run(msg);
-    }
-
-    @Component
-    class TxCode {
-
-        @Transactional
-        String run(String msg) {
-            log.info("Received event={}", msg);
-            //int val = messageCounter.get();
-            //if (val == 3)
-            //    throw new RuntimeException("simulate error");
-            try {
-                Thread.sleep(5_000);
-            } catch (InterruptedException ex) {
-            }            
-            return msg.toUpperCase();
-        }
-    }
+    }     
 
     @ServiceActivator(inputChannel = "outboundtopic.errors")
     public void errorProcessHandler(ErrorMessage em) {
-        log.error("@@@ !!!!! errorProcessHandler {}", em.toString());
-        //throw new RequeueCurrentMessageException("!!!!!!!!!!!!!!!!!! RETRY UNKNOWN PRODUCER ID !!!!!!!!!!!");
+        log.error("errorProcessHandler {}", em.toString());        
     }
 
     @ServiceActivator(inputChannel = "inboundtopic.errors")
     public void errorsSupplierHandler(ErrorMessage em) {
-        log.error("@@@ !!!!! errorSupplierHandler {}", em.toString());
+        log.error("errorSupplierHandler {}", em.toString());
     }
 
     public static class DefaultProducerInterceptor implements ProducerInterceptor<byte[], byte[]> {

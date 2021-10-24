@@ -31,10 +31,10 @@ public class MessageScheduler {
     @Scheduled(fixedDelayString = "${app.schedule.fixedDelay}",
             initialDelayString = "${app.schedule.initialDelay}")
     public void sendScheduledMessage() {
-        log.info("start scheduled task...");
+        log.info("Start scheduled task...");
         String message = "Hello World! #" + messageCounter.incrementAndGet();
-        messageSenderService.sendMessage(message);
-        log.info("scheduled task...handled {}", message);
+        messageSenderService.sendMessage("supplier-out-0",message);
+        log.info("Scheduled task...handled {}", message);
     }
     
 }

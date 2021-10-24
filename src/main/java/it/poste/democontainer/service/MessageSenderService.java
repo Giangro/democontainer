@@ -27,20 +27,15 @@ public class MessageSenderService {
 
     @Retryable(value = Throwable.class,
             maxAttempts = 3, backoff = @Backoff(delay = 5_000, multiplier = 1))
-    public void sendMessage(String message) {
+    public void sendMessage(String bindings, String message) {
 
         log.info("Sending new message: {}", message);
-        //try {
-        //    Thread.sleep(50_000);
-        //} catch (InterruptedException ex) {
-        //}
-
-        if (streamBridge.send("supplier-out-0", message) == false) {
-            log.error("####### Error while sending....{}", message);
+        if (streamBridge.send(bindings, message) == false) {
+            log.error("Error while sending....{}", message);
             throw new RuntimeException("error while sending message:" + message);
         } // if
         else {
-            log.info("message: {} has been sent", message);
+            log.info("Message: {} has been sent", message);
         }
 
     }
