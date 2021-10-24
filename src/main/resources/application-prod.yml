@@ -1,10 +1,41 @@
+app:
+    schedule:
+        fixedDelay: 10000
+        initialDelay: 30000
+management:
+    endpoint:
+        health:
+            enabled: true
+        info:
+            enabled: true
+        metrics:
+            enabled: true
+        prometheus:
+            enabled: true
+        shutdown:
+            enabled: true           
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+server:
+  tomcat:
+    connection-timeout: -1
+  port : 8080
 spring:
+  application:
+    name: democontainer
+    main:
+        banner-mode: off
+        log-startup-info: true
+    jackson:
+        deserialization:
+            fail-on-ignored-properties: false
+        default-property-inclusion: non_absent
+
   cloud:
     stream:
-      function.definition: supplier;process
-      poller:
-          fixedDelay: 10000
-          initialDelay: 2000          
+      function.definition: process
       bindings:
         supplier-out-0:
           destination: inboundtopic
@@ -29,32 +60,28 @@ spring:
                         isolation.level: read_committed                        
                         max.poll.records: 1
                         max.poll.interval.ms: 180000
-            process-out-0:    
-                producer:
-                    sync: true                 
-            supplier-out-0:
-                producer:
-                    sync: true                      
         binder:          
           brokers: kafka
           defaultBrokerPort: 9092                    
           minPartitionCount: 1
-          autoCreateTopics: true
-          autoAddPartitions: true            
+          autoCreateTopics: false
+          autoAddPartitions: false            
           transaction:
             transactionIdPrefix: tx-
-            #transaction.timeout.ms: 900000
-            transaction.timeout.ms: 1000
+            transaction.timeout.ms: 900000
+            #transaction.timeout.ms: 1000
             producer:         
+                errorChannelEnabled: true
                 sync: true
                 configuration:                  
                   enable.idempotence: true
                   max.in.flight.requests.per.connection: 5
                   retries: 100
                   acks: all
-                  max.block.ms: 1000                
+                  max.block.ms: 900000                
                   interceptor:
                       classes: it.poste.democontainer.config.Config$DefaultProducerInterceptor                
 logging:
   level:
     org.springframework.kafka.transaction: debug
+    org.apache.kafka: error

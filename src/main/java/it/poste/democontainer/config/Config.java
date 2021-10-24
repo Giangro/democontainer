@@ -9,24 +9,24 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Function;
-import java.util.function.Supplier;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.producer.ProducerInterceptor;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.TopicPartition;
-import org.springframework.cloud.stream.binder.RequeueCurrentMessageException;
 import org.springframework.cloud.stream.binder.kafka.KafkaBindingRebalanceListener;
 import org.springframework.cloud.stream.config.ListenerContainerCustomizer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.kafka.listener.AbstractMessageListenerContainer;
 import org.springframework.kafka.listener.DefaultAfterRollbackProcessor;
 import org.springframework.messaging.support.ErrorMessage;
+import org.springframework.retry.annotation.EnableRetry;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
@@ -37,13 +37,13 @@ import org.springframework.util.backoff.FixedBackOff;
  * @author GIANGR40
  */
 @Configuration
+@ComponentScan(basePackages = "it.poste")
 @EnableTransactionManagement
+@EnableScheduling
+@EnableRetry
 @Slf4j
-public class Config {
-
-    private AtomicInteger messageCounter
-            = new AtomicInteger(0);
-
+public class Config {   
+        
     @Bean
     KafkaBindingRebalanceListener kafkaBindingRebalanceListener() {
         return new KafkaBindingRebalanceListener() {
@@ -91,21 +91,10 @@ public class Config {
             //    throw new RuntimeException("simulate error");
             try {
                 Thread.sleep(5_000);
-            } catch (InterruptedException ex) {                
-            }
+            } catch (InterruptedException ex) {
+            }            
             return msg.toUpperCase();
         }
-    }
-
-    @Bean
-    public Supplier<String> supplier() {
-        return () -> {
-            //log.info("Sending new message");
-            int val = messageCounter.incrementAndGet();
-            //if (val == 3)
-            //    throw new RuntimeException("simulate error");
-            return "Hello World! #" + val;            
-        };
     }
 
     @ServiceActivator(inputChannel = "outboundtopic.errors")
@@ -131,7 +120,7 @@ public class Config {
         }
 
         @Override
-        public void onAcknowledgement(RecordMetadata metadata, Exception exception) {            
+        public void onAcknowledgement(RecordMetadata metadata, Exception exception) {
         }
 
         @Override
@@ -140,4 +129,8 @@ public class Config {
 
     }
 
+    @PostConstruct
+    public void init() {      
+    }
+    
 }

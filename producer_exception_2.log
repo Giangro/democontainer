@@ -636,3 +636,674 @@
 2021-10-23 12:47:09.749 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
 2021-10-23 12:47:09.749 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
 2021-10-23 12:47:09.750  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #4
+2021-10-23 12:47:14.824 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:47:19.779  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:47:19.780  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 25 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:47:19.900 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:47:19.901 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:47:19.902  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #5
+2021-10-23 12:47:24.977 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:47:29.922  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:47:29.923  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 29 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:47:30.036 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:47:30.036 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:47:30.037  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #6
+2021-10-23 12:47:35.117 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:47:40.054  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:47:40.055  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 33 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:47:40.184 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:47:40.185 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:47:40.187  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #7
+2021-10-23 12:47:45.248 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:47:50.207  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:47:50.208  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 37 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:47:50.343 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:47:50.343 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:47:50.345  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #8
+2021-10-23 12:47:55.413 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:48:00.341  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:48:00.341  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 41 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:48:00.473 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:48:00.474 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:48:00.476  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #9
+2021-10-23 12:48:05.556 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:48:10.512  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:48:10.513  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 45 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:48:10.635 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:48:10.636 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:48:10.637  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #10
+2021-10-23 12:48:15.706 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:48:20.646  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:48:20.646  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 49 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:48:20.774 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:48:20.774 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:48:20.776  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #11
+2021-10-23 12:48:25.805 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:48:30.798  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:48:30.799  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 53 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:48:30.926 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:48:30.927 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:48:30.928  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #12
+2021-10-23 12:48:35.998 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:48:40.953  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:48:40.954  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 57 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:48:41.079 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:48:41.080 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:48:41.081  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #13
+2021-10-23 12:48:46.118 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:48:51.114  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:48:51.115  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 61 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:48:51.252 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:48:51.253 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:48:51.258  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #14
+2021-10-23 12:48:56.313 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:49:01.266  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:49:01.267  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 65 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:49:01.442 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:49:01.443 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:49:01.446  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #15
+2021-10-23 12:49:06.514 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:49:11.409  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:49:11.410  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 69 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:49:11.537 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:49:11.537 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:49:11.538  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #16
+2021-10-23 12:49:16.612 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:49:21.565  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:49:21.566  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 73 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:49:21.697 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:49:21.697 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:49:21.699  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #17
+2021-10-23 12:49:26.757 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:49:31.708  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:49:31.708  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 77 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:49:31.845 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:49:31.846 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:49:31.847  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #18
+2021-10-23 12:49:36.930 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:49:41.869  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:49:41.870  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 81 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:49:41.991 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:49:41.992 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:49:41.993  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #19
+2021-10-23 12:49:47.047 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:49:52.014  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:49:52.014  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 85 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:49:52.143 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:49:52.143 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:49:52.144  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #20
+2021-10-23 12:49:57.248 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:50:02.164  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:50:02.165  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 89 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:50:02.275 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:50:02.275 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:50:02.276  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #21
+2021-10-23 12:50:07.352 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:50:12.292  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:50:12.292  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 93 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:50:12.420 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:50:12.421 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:50:12.424  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #22
+2021-10-23 12:50:17.509 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:50:22.449  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:50:22.450  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 97 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:50:22.576 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:50:22.577 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:50:22.580  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #23
+2021-10-23 12:50:27.627 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:50:32.590  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:50:32.590  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 101 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:50:32.697 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:50:32.697 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:50:32.697  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #24
+2021-10-23 12:50:37.726 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:50:42.706  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:50:42.707  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 105 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:50:42.848 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:50:42.848 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:50:42.849  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #25
+2021-10-23 12:50:47.879 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:50:52.851  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:50:52.852  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 109 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:50:52.970 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:50:52.971 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:50:52.971  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #26
+2021-10-23 12:50:58.001 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:51:02.980  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:51:02.981  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 113 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:51:03.095 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:51:03.095 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:51:03.096  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #27
+2021-10-23 12:51:08.146 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:51:13.105  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:51:13.105  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 117 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:51:13.215 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:51:13.215 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:51:13.216  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #28
+2021-10-23 12:51:18.233 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:51:23.224  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:51:23.225  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 121 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:51:23.338 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:51:23.338 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:51:23.339  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #29
+2021-10-23 12:51:28.390 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:51:33.358  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:51:33.360  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 125 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:51:33.468 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:51:33.468 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:51:33.468  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #30
+2021-10-23 12:51:38.507 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:51:43.489  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:51:43.489  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 130 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:51:43.599 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:51:43.599 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:51:43.601  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #31
+2021-10-23 12:51:48.635 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:51:53.607  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:51:53.607  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 134 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:51:53.716 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:51:53.716 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:51:53.717  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #32
+2021-10-23 12:51:58.736 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:52:03.733  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:52:03.734  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 138 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:52:03.846 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:52:03.846 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:52:03.847  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #33
+2021-10-23 12:52:08.885 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:52:13.858  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:52:13.859  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 142 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:52:13.970 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:52:13.970 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:52:13.972  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #34
+2021-10-23 12:52:18.995 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:52:23.995  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:52:23.995  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 146 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:52:24.106 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:52:24.106 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:52:24.107  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #35
+2021-10-23 12:52:29.145 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:52:34.114  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:52:34.115  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 150 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:52:34.229 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:52:34.230 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:52:34.231  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #36
+2021-10-23 12:52:39.253 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:52:44.239  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:52:44.240  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 154 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:52:44.351 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:52:44.351 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:52:44.352  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #37
+2021-10-23 12:52:49.371 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:52:54.361  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:52:54.361  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 158 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:52:54.469 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:52:54.469 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:52:54.470  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #38
+2021-10-23 12:52:59.486 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:53:04.477  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:53:04.477  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 162 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:53:04.590 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:53:04.590 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:53:04.591  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #39
+2021-10-23 12:53:09.613 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:53:14.599  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:53:14.599  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 166 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:53:14.707 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:53:14.708 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:53:14.708  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #40
+2021-10-23 12:53:19.734 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:53:24.713  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:53:24.713  WARN 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Got error produce response with correlation id 170 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:53:24.822 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:53:24.822 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]]
+2021-10-23 12:53:24.822  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #41
+2021-10-23 12:53:29.831  INFO 51072 --- [.inboundtopic.0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Transiting to fatal error state due to org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id.
+2021-10-23 12:53:29.840 ERROR 51072 --- [.inboundtopic.0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Aborting producer batches due to fatal error
+
+org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id.
+
+2021-10-23 12:53:29.842  INFO 51072 --- [.inboundtopic.0] o.s.i.h.s.MessagingMethodInvokerHelper   : Overriding default instance of MessageHandlerMethodFactory with provided one.
+2021-10-23 12:53:29.843 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction rollback
+2021-10-23 12:53:29.843  INFO 51072 --- [container-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Aborting incomplete transaction
+2021-10-23 12:53:29.850 ERROR 51072 --- [container-0-C-1] o.s.k.core.DefaultKafkaProducerFactory   : Abort failed: CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]
+
+org.apache.kafka.common.KafkaException: Cannot execute transactional method because we are in an error state
+	at org.apache.kafka.clients.producer.internals.TransactionManager.maybeFailWithError(TransactionManager.java:1112) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.TransactionManager.lambda$beginAbort$3(TransactionManager.java:371) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.TransactionManager.handleCachedTransactionRequestResult(TransactionManager.java:1200) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.TransactionManager.beginAbort(TransactionManager.java:369) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.KafkaProducer.abortTransaction(KafkaProducer.java:763) ~[kafka-clients-2.7.1.jar:na]
+	at org.springframework.kafka.core.DefaultKafkaProducerFactory$CloseSafeProducer.abortTransaction(DefaultKafkaProducerFactory.java:950) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.core.KafkaResourceHolder.rollback(KafkaResourceHolder.java:66) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.transaction.KafkaTransactionManager.doRollback(KafkaTransactionManager.java:194) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:835) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.rollback(AbstractPlatformTransactionManager.java:809) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.transaction.support.TransactionTemplate.rollbackOnException(TransactionTemplate.java:168) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:144) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeInTransaction(KafkaMessageListenerContainer.java:2088) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListenerInTx(KafkaMessageListenerContainer.java:2057) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2033) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:1709) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1276) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1268) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1163) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id.
+
+2021-10-23 12:53:29.851  WARN 51072 --- [container-0-C-1] o.s.k.core.DefaultKafkaProducerFactory   : Error during some operation; producer removed from cache: CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@1cefa1fc]
+2021-10-23 12:53:29.851  INFO 51072 --- [container-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Closing the Kafka producer with timeoutMillis = 5000 ms.
+2021-10-23 12:53:29.879 ERROR 51072 --- [.inboundtopic.0] it.poste.democontainer.config.Config     : @@@ !!!!! errorProcessHandler ErrorMessage [payload=org.springframework.integration.kafka.support.KafkaSendFailureException: nested exception is org.springframework.kafka.core.KafkaProducerException: Failed to send; nested exception is org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id., failedMessage=GenericMessage [payload=byte[16], headers={kafka_timestampType=CREATE_TIME, kafka_receivedTopic=inboundtopic, target-protocol=kafka, skip-input-type-conversion=false, kafka_offset=58445, scst_nativeHeadersPresent=true, kafka_consumer=org.apache.kafka.clients.consumer.KafkaConsumer@47fd9571, id=73907db3-dd30-c091-e8ad-dde759577fed, kafka_receivedPartitionId=0, contentType=application/json, kafka_receivedTimestamp=1634986404707, kafka_groupId=demo-consumer-group, timestamp=1634986409824}] [record=ProducerRecord(topic=outboundtopic, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = skip-input-type-conversion, value = [102, 97, 108, 115, 101]), RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = spring_json_header_types, value = [123, 34, 115, 107, 105, 112, 45, 105, 110, 112, 117, 116, 45, 116, 121, 112, 101, 45, 99, 111, 110, 118, 101, 114, 115, 105, 111, 110, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 66, 111, 111, 108, 101, 97, 110, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@446dff77, timestamp=null)], headers={id=07318abd-c6e4-a460-fea1-b01433f42289, timestamp=1634986409841}]
+2021-10-23 12:53:29.881 ERROR 51072 --- [.inboundtopic.0] o.s.integration.handler.LoggingHandler   : org.springframework.integration.kafka.support.KafkaSendFailureException: nested exception is org.springframework.kafka.core.KafkaProducerException: Failed to send; nested exception is org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id., failedMessage=GenericMessage [payload=byte[16], headers={kafka_timestampType=CREATE_TIME, kafka_receivedTopic=inboundtopic, target-protocol=kafka, skip-input-type-conversion=false, kafka_offset=58445, scst_nativeHeadersPresent=true, kafka_consumer=org.apache.kafka.clients.consumer.KafkaConsumer@47fd9571, id=73907db3-dd30-c091-e8ad-dde759577fed, kafka_receivedPartitionId=0, contentType=application/json, kafka_receivedTimestamp=1634986404707, kafka_groupId=demo-consumer-group, timestamp=1634986409824}] [record=ProducerRecord(topic=outboundtopic, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = skip-input-type-conversion, value = [102, 97, 108, 115, 101]), RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = spring_json_header_types, value = [123, 34, 115, 107, 105, 112, 45, 105, 110, 112, 117, 116, 45, 116, 121, 112, 101, 45, 99, 111, 110, 118, 101, 114, 115, 105, 111, 110, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 66, 111, 111, 108, 101, 97, 110, 34, 44, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@446dff77, timestamp=null)]
+	at org.springframework.integration.kafka.outbound.KafkaProducerMessageHandler$1.onFailure(KafkaProducerMessageHandler.java:666)
+	at org.springframework.util.concurrent.ListenableFutureCallbackRegistry.notifyFailure(ListenableFutureCallbackRegistry.java:86)
+	at org.springframework.util.concurrent.ListenableFutureCallbackRegistry.failure(ListenableFutureCallbackRegistry.java:158)
+	at org.springframework.util.concurrent.ListenableFutureTask.done(ListenableFutureTask.java:100)
+	at org.springframework.util.concurrent.SettableListenableFuture$SettableTask.done(SettableListenableFuture.java:175)
+	at java.base/java.util.concurrent.FutureTask.finishCompletion(FutureTask.java:381)
+	at java.base/java.util.concurrent.FutureTask.setException(FutureTask.java:250)
+	at org.springframework.util.concurrent.SettableListenableFuture$SettableTask.setExceptionResult(SettableListenableFuture.java:163)
+	at org.springframework.util.concurrent.SettableListenableFuture.setException(SettableListenableFuture.java:70)
+	at org.springframework.kafka.core.KafkaTemplate.lambda$buildCallback$4(KafkaTemplate.java:620)
+	at org.springframework.kafka.core.DefaultKafkaProducerFactory$CloseSafeProducer$1.onCompletion(DefaultKafkaProducerFactory.java:872)
+	at org.apache.kafka.clients.producer.KafkaProducer$InterceptorCallback.onCompletion(KafkaProducer.java:1366)
+	at org.apache.kafka.clients.producer.internals.ProducerBatch.completeFutureAndFireCallbacks(ProducerBatch.java:231)
+	at org.apache.kafka.clients.producer.internals.ProducerBatch.abort(ProducerBatch.java:159)
+	at org.apache.kafka.clients.producer.internals.RecordAccumulator.abortBatches(RecordAccumulator.java:763)
+	at org.apache.kafka.clients.producer.internals.Sender.maybeAbortBatches(Sender.java:503)
+	at org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:304)
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:240)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.springframework.kafka.core.KafkaProducerException: Failed to send; nested exception is org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id.
+	... 10 more
+Caused by: org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id.
+
+2021-10-23 12:53:29.881 ERROR 51072 --- [.inboundtopic.0] o.s.k.support.LoggingProducerListener    : Exception thrown when sending a message with key='null' and payload='byte[16]' to topic outboundtopic:
+
+org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id.
+
+2021-10-23 12:53:29.887  INFO 51072 --- [container-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:53:29.887  INFO 51072 --- [container-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:53:29.887  INFO 51072 --- [container-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:53:29.888  INFO 51072 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-tx-demo-consumer-group.inboundtopic.0 unregistered
+2021-10-23 12:53:29.892 ERROR 51072 --- [container-0-C-1] o.s.t.support.TransactionTemplate        : Application exception overridden by rollback exception
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener failed; nested exception is org.springframework.messaging.MessageHandlingException: nested exception is org.springframework.kafka.core.KafkaProducerException: Failed to send; nested exception is org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id., failedMessage=GenericMessage [payload=byte[16], headers={kafka_timestampType=CREATE_TIME, kafka_receivedTopic=inboundtopic, target-protocol=kafka, skip-input-type-conversion=false, kafka_offset=58445, scst_nativeHeadersPresent=true, kafka_consumer=org.apache.kafka.clients.consumer.KafkaConsumer@47fd9571, id=73907db3-dd30-c091-e8ad-dde759577fed, kafka_receivedPartitionId=0, contentType=application/json, kafka_receivedTimestamp=1634986404707, kafka_groupId=demo-consumer-group, timestamp=1634986409824}]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2387) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2354) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2315) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2229) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.access$2300(KafkaMessageListenerContainer.java:518) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer$3.doInTransactionWithoutResult(KafkaMessageListenerContainer.java:2097) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.transaction.support.TransactionCallbackWithoutResult.doInTransaction(TransactionCallbackWithoutResult.java:36) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeInTransaction(KafkaMessageListenerContainer.java:2088) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListenerInTx(KafkaMessageListenerContainer.java:2057) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2033) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:1709) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1276) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1268) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1163) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: org.springframework.messaging.MessageHandlingException: nested exception is org.springframework.kafka.core.KafkaProducerException: Failed to send; nested exception is org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id.
+	at org.springframework.integration.kafka.outbound.KafkaProducerMessageHandler.handleRequestMessage(KafkaProducerMessageHandler.java:512) ~[spring-integration-kafka-5.5.4.jar:5.5.4]
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:136) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:56) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.cloud.stream.binder.AbstractMessageChannelBinder$SendingHandler.handleMessageInternal(AbstractMessageChannelBinder.java:1056) ~[spring-cloud-stream-3.1.4.jar:3.1.4]
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:56) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:115) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:133) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.dispatch(UnicastingDispatcher.java:106) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:317) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:272) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:187) ~[spring-messaging-5.3.10.jar:5.3.10]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:166) ~[spring-messaging-5.3.10.jar:5.3.10]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:47) ~[spring-messaging-5.3.10.jar:5.3.10]
+	at org.springframework.messaging.core.AbstractDestinationResolvingMessagingTemplate.send(AbstractDestinationResolvingMessagingTemplate.java:72) ~[spring-messaging-5.3.10.jar:5.3.10]
+	at org.springframework.cloud.stream.function.FunctionConfiguration$FunctionToDestinationBinder$1.doSendMessage(FunctionConfiguration.java:611) ~[spring-cloud-stream-3.1.4.jar:3.1.4]
+	at org.springframework.cloud.stream.function.FunctionConfiguration$FunctionToDestinationBinder$1.handleMessageInternal(FunctionConfiguration.java:594) ~[spring-cloud-stream-3.1.4.jar:3.1.4]
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:56) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:115) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:133) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.dispatch(UnicastingDispatcher.java:106) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:317) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:272) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:187) ~[spring-messaging-5.3.10.jar:5.3.10]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:166) ~[spring-messaging-5.3.10.jar:5.3.10]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:47) ~[spring-messaging-5.3.10.jar:5.3.10]
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:109) ~[spring-messaging-5.3.10.jar:5.3.10]
+	at org.springframework.integration.endpoint.MessageProducerSupport.sendMessage(MessageProducerSupport.java:208) ~[spring-integration-core-5.5.4.jar:5.5.4]
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter.sendMessageIfAny(KafkaMessageDrivenChannelAdapter.java:398) ~[spring-integration-kafka-5.5.4.jar:5.5.4]
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter.access$300(KafkaMessageDrivenChannelAdapter.java:79) ~[spring-integration-kafka-5.5.4.jar:5.5.4]
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter$IntegrationRecordMessageListener.onMessage(KafkaMessageDrivenChannelAdapter.java:457) ~[spring-integration-kafka-5.5.4.jar:5.5.4]
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter$IntegrationRecordMessageListener.onMessage(KafkaMessageDrivenChannelAdapter.java:431) ~[spring-integration-kafka-5.5.4.jar:5.5.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2334) ~[spring-kafka-2.7.7.jar:2.7.7]
+	... 16 common frames omitted
+Caused by: org.springframework.kafka.core.KafkaProducerException: Failed to send; nested exception is org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id.
+	at org.springframework.kafka.core.KafkaTemplate.lambda$buildCallback$4(KafkaTemplate.java:620) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.core.DefaultKafkaProducerFactory$CloseSafeProducer$1.onCompletion(DefaultKafkaProducerFactory.java:872) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.apache.kafka.clients.producer.KafkaProducer$InterceptorCallback.onCompletion(KafkaProducer.java:1366) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.ProducerBatch.completeFutureAndFireCallbacks(ProducerBatch.java:231) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.ProducerBatch.abort(ProducerBatch.java:159) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.RecordAccumulator.abortBatches(RecordAccumulator.java:763) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.maybeAbortBatches(Sender.java:503) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:304) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:240) ~[kafka-clients-2.7.1.jar:na]
+	... 1 common frames omitted
+Caused by: org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id.
+
+2021-10-23 12:53:29.893 ERROR 51072 --- [container-0-C-1] essageListenerContainer$ListenerConsumer : Transaction rolled back
+
+org.apache.kafka.common.KafkaException: Cannot execute transactional method because we are in an error state
+	at org.apache.kafka.clients.producer.internals.TransactionManager.maybeFailWithError(TransactionManager.java:1112) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.TransactionManager.lambda$beginAbort$3(TransactionManager.java:371) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.TransactionManager.handleCachedTransactionRequestResult(TransactionManager.java:1200) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.TransactionManager.beginAbort(TransactionManager.java:369) ~[kafka-clients-2.7.1.jar:na]
+	at org.apache.kafka.clients.producer.KafkaProducer.abortTransaction(KafkaProducer.java:763) ~[kafka-clients-2.7.1.jar:na]
+	at org.springframework.kafka.core.DefaultKafkaProducerFactory$CloseSafeProducer.abortTransaction(DefaultKafkaProducerFactory.java:950) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.core.KafkaResourceHolder.rollback(KafkaResourceHolder.java:66) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.transaction.KafkaTransactionManager.doRollback(KafkaTransactionManager.java:194) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:835) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.rollback(AbstractPlatformTransactionManager.java:809) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.transaction.support.TransactionTemplate.rollbackOnException(TransactionTemplate.java:168) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:144) ~[spring-tx-5.3.10.jar:5.3.10]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeInTransaction(KafkaMessageListenerContainer.java:2088) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListenerInTx(KafkaMessageListenerContainer.java:2057) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2033) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:1709) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1276) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1268) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1163) ~[spring-kafka-2.7.7.jar:2.7.7]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id.
+
+2021-10-23 12:53:29.911  INFO 51072 --- [container-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Seeking to offset 58445 for partition inboundtopic-0
+2021-10-23 12:53:29.915 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:53:29.915  INFO 51072 --- [container-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [kafka:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-tx-demo-consumer-group.inboundtopic.0
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = [it.poste.democontainer.config.Config$DefaultProducerInterceptor]
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 1000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 100
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = tx-demo-consumer-group.inboundtopic.0
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2021-10-23 12:53:29.917  INFO 51072 --- [container-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Instantiated a transactional producer.
+2021-10-23 12:53:29.923  INFO 51072 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:53:29.923  INFO 51072 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:53:29.923  INFO 51072 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634986409923
+2021-10-23 12:53:29.924  INFO 51072 --- [container-0-C-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Invoking InitProducerId for the first time in order to acquire a producer ID
+2021-10-23 12:53:29.938  INFO 51072 --- [.inboundtopic.0] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Cluster ID: u8G57YJBQraGWWAiI00F-w
+2021-10-23 12:53:29.938  INFO 51072 --- [.inboundtopic.0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Discovered transaction coordinator kafka:9092 (id: 1 rack: null)
+2021-10-23 12:53:30.058  INFO 51072 --- [.inboundtopic.0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] ProducerId set to 33015 with epoch 0
+2021-10-23 12:53:30.059 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@523e8cf9]]
+2021-10-23 12:53:30.061  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #41
+2021-10-23 12:53:34.827  INFO 51072 --- [| producer-tx-0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-0, transactionalId=tx-0] Transiting to fatal error state due to org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id.
+2021-10-23 12:53:34.827 ERROR 51072 --- [| producer-tx-0] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-0, transactionalId=tx-0] Aborting producer batches due to fatal error
+
+org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id.
+
+2021-10-23 12:53:34.827 ERROR 51072 --- [| producer-tx-0] o.s.k.support.LoggingProducerListener    : Exception thrown when sending a message with key='null' and payload='byte[16]' to topic inboundtopic:
+
+org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id.
+
+2021-10-23 12:53:34.827 ERROR 51072 --- [   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : commitTransaction failed: CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@62656452]
+
+org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id.
+
+2021-10-23 12:53:34.827  WARN 51072 --- [   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : Error during some operation; producer removed from cache: CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@62656452]
+2021-10-23 12:53:34.827  INFO 51072 --- [   scheduling-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-0, transactionalId=tx-0] Closing the Kafka producer with timeoutMillis = 5000 ms.
+2021-10-23 12:53:34.832  INFO 51072 --- [   scheduling-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:53:34.833  INFO 51072 --- [   scheduling-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:53:34.833  INFO 51072 --- [   scheduling-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:53:34.833  INFO 51072 --- [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-tx-0 unregistered
+2021-10-23 12:53:34.833 ERROR 51072 --- [   scheduling-1] o.s.integration.handler.LoggingHandler   : org.springframework.messaging.MessageHandlingException: error occurred in message handler [org.springframework.cloud.stream.binder.kafka.KafkaMessageChannelBinder$ProducerConfigurationMessageHandler@6afa1688]; nested exception is org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id., failedMessage=GenericMessage [payload=byte[16], headers={contentType=application/json, id=09319e66-2056-e177-533c-4d5d7c3966a1, timestamp=1634986414823}]
+	at org.springframework.integration.support.utils.IntegrationUtils.wrapInHandlingExceptionIfNecessary(IntegrationUtils.java:192)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:65)
+	at org.springframework.cloud.stream.binder.AbstractMessageChannelBinder$SendingHandler.handleMessageInternal(AbstractMessageChannelBinder.java:1056)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:56)
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:115)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:133)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.dispatch(UnicastingDispatcher.java:106)
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72)
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:317)
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:272)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:187)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:166)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:47)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:109)
+	at org.springframework.integration.router.AbstractMessageRouter.doSend(AbstractMessageRouter.java:213)
+	at org.springframework.integration.router.AbstractMessageRouter.handleMessageInternal(AbstractMessageRouter.java:195)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:56)
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:115)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:133)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.dispatch(UnicastingDispatcher.java:106)
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72)
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:317)
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:272)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:187)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:166)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:47)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:109)
+	at org.springframework.integration.endpoint.SourcePollingChannelAdapter.handleMessage(SourcePollingChannelAdapter.java:196)
+	at org.springframework.integration.endpoint.AbstractPollingEndpoint.messageReceived(AbstractPollingEndpoint.java:475)
+	at org.springframework.integration.endpoint.AbstractPollingEndpoint.doPoll(AbstractPollingEndpoint.java:461)
+	at org.springframework.integration.endpoint.AbstractPollingEndpoint.pollForMessage(AbstractPollingEndpoint.java:413)
+	at org.springframework.integration.endpoint.AbstractPollingEndpoint.lambda$createPoller$4(AbstractPollingEndpoint.java:348)
+	at org.springframework.integration.util.ErrorHandlingTaskExecutor.lambda$execute$0(ErrorHandlingTaskExecutor.java:57)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.integration.util.ErrorHandlingTaskExecutor.execute(ErrorHandlingTaskExecutor.java:55)
+	at org.springframework.integration.endpoint.AbstractPollingEndpoint.lambda$createPoller$5(AbstractPollingEndpoint.java:341)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:95)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: org.apache.kafka.common.errors.InvalidPidMappingException: The producer attempted to use a producer id which is not currently assigned to its transactional id.
+
+2021-10-23 12:53:35.091  INFO 51072 --- [.inboundtopic.0] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Discovered group coordinator kafka:9092 (id: 1 rack: null)
+2021-10-23 12:53:35.194 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:53:44.835  INFO 51072 --- [   scheduling-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [kafka:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-tx-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = [it.poste.democontainer.config.Config$DefaultProducerInterceptor]
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 1000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 100
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = tx-1
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2021-10-23 12:53:44.837  INFO 51072 --- [   scheduling-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-1, transactionalId=tx-1] Instantiated a transactional producer.
+2021-10-23 12:53:44.844  INFO 51072 --- [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-10-23 12:53:44.845  INFO 51072 --- [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-10-23 12:53:44.845  INFO 51072 --- [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1634986424844
+2021-10-23 12:53:44.846  INFO 51072 --- [   scheduling-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-1, transactionalId=tx-1] Invoking InitProducerId for the first time in order to acquire a producer ID
+2021-10-23 12:53:44.866  INFO 51072 --- [| producer-tx-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-tx-1, transactionalId=tx-1] Cluster ID: u8G57YJBQraGWWAiI00F-w
+2021-10-23 12:53:44.867  INFO 51072 --- [| producer-tx-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-1, transactionalId=tx-1] Discovered transaction coordinator kafka:9092 (id: 1 rack: null)
+2021-10-23 12:53:44.984  INFO 51072 --- [| producer-tx-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-tx-1, transactionalId=tx-1] ProducerId set to 33016 with epoch 0
+2021-10-23 12:53:45.021 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:53:45.022 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@523e8cf9]]
+2021-10-23 12:53:45.022  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #43
+2021-10-23 12:53:50.068 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:53:55.031  INFO 51072 --- [| producer-tx-1] o.a.k.c.p.internals.ProducerBatch        : Resetting sequence number of batch with current sequence 1 for partition inboundtopic-0 to 0
+2021-10-23 12:53:55.031  WARN 51072 --- [| producer-tx-1] o.a.k.clients.producer.internals.Sender  : [Producer clientId=producer-tx-1, transactionalId=tx-1] Got error produce response with correlation id 12 on topic-partition inboundtopic-0, retrying (99 attempts left). Error: UNKNOWN_PRODUCER_ID
+2021-10-23 12:53:55.139 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2021-10-23 12:53:55.139 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Created Kafka transaction on producer [CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@523e8cf9]]
+2021-10-23 12:53:55.140  INFO 51072 --- [container-0-C-1] it.poste.democontainer.config.Config     : Received event=Hello World! #44
+2021-10-23 12:54:00.157 DEBUG 51072 --- [container-0-C-1] o.s.k.t.KafkaTransactionManager          : Initiating transaction commit
+2021-10-23 12:54:00.162  INFO 51072 --- [container-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-demo-consumer-group.inboundtopic.0, transactionalId=tx-demo-consumer-group.inboundtopic.0] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2021-10-23 12:54:00.166  INFO 51072 --- [container-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:54:00.166  INFO 51072 --- [container-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:54:00.166  INFO 51072 --- [container-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:54:00.167  INFO 51072 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-tx-demo-consumer-group.inboundtopic.0 unregistered
+2021-10-23 12:54:00.167  INFO 51072 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Revoke previously assigned partitions inboundtopic-0
+2021-10-23 12:54:00.168  INFO 51072 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-demo-consumer-group-2, groupId=demo-consumer-group] Member consumer-demo-consumer-group-2-7ad35c76-abd4-4612-8811-4f395bed2682 sending LeaveGroup request to coordinator kafka:9092 (id: 2147483646 rack: null) due to the consumer is being closed
+2021-10-23 12:54:00.176  INFO 51072 --- [container-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:54:00.176  INFO 51072 --- [container-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:54:00.177  INFO 51072 --- [container-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:54:00.179  INFO 51072 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-demo-consumer-group-2 unregistered
+2021-10-23 12:54:00.179  INFO 51072 --- [container-0-C-1] essageListenerContainer$ListenerConsumer : demo-consumer-group: Consumer stopped
+2021-10-23 12:54:00.182  INFO 51072 --- [ionShutdownHook] s.i.k.i.KafkaMessageDrivenChannelAdapter : stopped org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter@3b55c3dc
+2021-10-23 12:54:00.199  INFO 51072 --- [ionShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application.inboundtopic.demo-consumer-group.errors' has 1 subscriber(s).
+2021-10-23 12:54:00.199  INFO 51072 --- [ionShutdownHook] o.s.i.e.SourcePollingChannelAdapter      : stopped bean 'supplier_integrationflow.org.springframework.integration.config.SourcePollingChannelAdapterFactoryBean#0'
+2021-10-23 12:54:00.201  INFO 51072 --- [ionShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-tx-1, transactionalId=tx-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2021-10-23 12:54:00.204  INFO 51072 --- [ionShutdownHook] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2021-10-23 12:54:00.205  INFO 51072 --- [ionShutdownHook] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-10-23 12:54:00.205  INFO 51072 --- [ionShutdownHook] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2021-10-23 12:54:00.205  INFO 51072 --- [ionShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-tx-1 unregistered
+2021-10-23 12:54:00.206  INFO 51072 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-10-23 12:54:00.207  INFO 51072 --- [ionShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 0 subscriber(s).
+2021-10-23 12:54:00.207  INFO 51072 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2021-10-23 12:54:00.207  INFO 51072 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {router} as a subscriber to the 'supplier_integrationflow.channel#0' channel
+2021-10-23 12:54:00.207  INFO 51072 --- [ionShutdownHook] o.s.integration.channel.DirectChannel    : Channel 'application.supplier_integrationflow.channel#0' has 0 subscriber(s).
+2021-10-23 12:54:00.207  INFO 51072 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean 'supplier_integrationflow.org.springframework.integration.config.ConsumerEndpointFactoryBean#0'
+2021-10-23 12:54:00.207  INFO 51072 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {service-activator:config.errorsSupplierHandler.serviceActivator} as a subscriber to the 'inboundtopic.errors' channel
+2021-10-23 12:54:00.207  INFO 51072 --- [ionShutdownHook] o.s.integration.channel.DirectChannel    : Channel 'application.inboundtopic.errors' has 0 subscriber(s).
+2021-10-23 12:54:00.207  INFO 51072 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean 'config.errorsSupplierHandler.serviceActivator'
+2021-10-23 12:54:00.207  INFO 51072 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {service-activator:config.errorProcessHandler.serviceActivator} as a subscriber to the 'outboundtopic.errors' channel
+2021-10-23 12:54:00.207  INFO 51072 --- [ionShutdownHook] o.s.integration.channel.DirectChannel    : Channel 'application.outboundtopic.errors' has 0 subscriber(s).
+2021-10-23 12:54:00.207  INFO 51072 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean 'config.errorProcessHandler.serviceActivator'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  07:50 min
+[INFO] Finished at: 2021-10-23T12:54:00+02:00
+[INFO] ------------------------------------------------------------------------
