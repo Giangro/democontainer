@@ -70,17 +70,17 @@ public class Config {
         return (container, destination, group) -> container.setAfterRollbackProcessor(
                 new DefaultAfterRollbackProcessor<byte[], byte[]>(
                         (record, exception) -> log.error("Discarding failed record: {}", record),
-                        new FixedBackOff(3L, 3)));
+                        new FixedBackOff(3_000L, 3)));
     }     
 
     @ServiceActivator(inputChannel = "outboundtopic.errors")
     public void errorProcessHandler(ErrorMessage em) {
-        log.error("errorProcessHandler {}", em.toString());        
+        log.error("@@@@@@@@@@@@@@@@ errorProcessHandler {}", em.toString());        
     }
 
     @ServiceActivator(inputChannel = "inboundtopic.errors")
     public void errorsSupplierHandler(ErrorMessage em) {
-        log.error("errorSupplierHandler {}", em.toString());
+        log.error("@@@@@@@@@@@@@@@@ errorSupplierHandler {}", em.toString());
     }
 
     public static class DefaultProducerInterceptor implements ProducerInterceptor<byte[], byte[]> {
