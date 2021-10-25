@@ -7,6 +7,7 @@ package it.poste.democontainer.service;
 
 import java.util.function.Consumer;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,10 +20,12 @@ import org.springframework.transaction.annotation.Transactional;
 @Slf4j
 public class ConsumerForProducerTransactionService {
 
-    private MessageSenderService messageSenderService;
+    private StreamBridge streamBridge;        
+    private Boolean raiseException;
     
-    public ConsumerForProducerTransactionService(MessageSenderService messagesenderservice) {
-        messageSenderService = messagesenderservice;
+    public ConsumerForProducerTransactionService(StreamBridge streambridge) {
+        streamBridge = streambridge;
+        raiseException = true;
     }
     
     @Bean
@@ -39,7 +42,12 @@ public class ConsumerForProducerTransactionService {
         } catch (InterruptedException ex) {
         }
         log.info("Message handled={}", msg);        
-        messageSenderService.sendMessage("process-out-0", msg.toUpperCase());
+        streamBridge.send("process-out-0", msg.toUpperCase());
+        if ("HELLO WORLD! #1".equals(msg.toUpperCase()) && raiseException == true) {
+                raiseException = false;
+                log.error("throw run time exception for {}", msg.toUpperCase());
+                throw new RuntimeException("!!!!!! Simulate exception for:" + msg.toUpperCase());
+       } // if
     }
 
 }

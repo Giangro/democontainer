@@ -39,27 +39,28 @@ spring:
       bindings:
         supplier-out-0:
           destination: inboundtopic
-          producer:
-              errorChannelEnabled: true
+          producer:               
+             errorChannelEnabled: true
         process-in-0:
           group: demo-consumer-group
           destination: inboundtopic
           consumer:
-            maxAttempts: 3            
+            maxAttempts: 1          
         process-out-0:
           destination: outboundtopic
-          producer:
-              errorChannelEnabled: true
+          producer:               
+            errorChannelEnabled: true            
       kafka:
         bindings:                    
             process-in-0:  
                 consumer:
                     enableDlq: true
                     dlqName: inboundtopic.dlq
+                    autoCommitOnError: true
                     configuration:
                         isolation.level: read_committed                        
                         max.poll.records: 1
-                        max.poll.interval.ms: 180000
+                        max.poll.interval.ms: 180000           
         binder:          
           brokers: kafka
           defaultBrokerPort: 9092                    
@@ -70,8 +71,7 @@ spring:
             transactionIdPrefix: tx-
             transaction.timeout.ms: 900000
             #transaction.timeout.ms: 1000
-            producer:         
-                errorChannelEnabled: true
+            producer:                         
                 sync: true
                 configuration:                  
                   enable.idempotence: true
