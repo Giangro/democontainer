@@ -77,20 +77,20 @@ public class Config {
     }
 
     @Bean
-	public ListenerContainerCustomizer<AbstractMessageListenerContainer<?, ?>> customizer(BinderFactory binders,
-			GenericApplicationContext ctx) {
+    public ListenerContainerCustomizer<AbstractMessageListenerContainer<?, ?>> customizer(BinderFactory binders,
+            GenericApplicationContext ctx) {
 
-		return (container, dest, group) -> {
-			ctx.registerBean("recoverTemplate", KafkaOperations.class, () -> recoverTemplate(binders));
-			@SuppressWarnings("unchecked")
-			KafkaOperations<byte[], byte[]> recoverTemplate = ctx.getBean("recoverTemplate", KafkaOperations.class);
-			container.setAfterRollbackProcessor(new DefaultAfterRollbackProcessor<>(
-					new DeadLetterPublishingRecoverer(recoverTemplate,
-							(cr, e) -> new TopicPartition("inboundtopic.DLT", -1)),
-					new FixedBackOff(3000L, 3L), recoverTemplate, true));
-		};
-	}
-    
+        return (container, dest, group) -> {
+            ctx.registerBean("recoverTemplate", KafkaOperations.class, () -> recoverTemplate(binders));
+            @SuppressWarnings("unchecked")
+            KafkaOperations<byte[], byte[]> recoverTemplate = ctx.getBean("recoverTemplate", KafkaOperations.class);
+            container.setAfterRollbackProcessor(new DefaultAfterRollbackProcessor<>(
+                    new DeadLetterPublishingRecoverer(recoverTemplate,
+                            (cr, e) -> new TopicPartition("inboundtopic.DLT", -1)),
+                    new FixedBackOff(3000L, 3L), recoverTemplate, true));
+        };
+    }
+
     @ServiceActivator(inputChannel = "outboundtopic.errors")
     public void errorProcessHandler(ErrorMessage em) {
         log.error("@@@@@@@@@@@@@@@@ errorProcessHandler {}", em.toString());
