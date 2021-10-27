@@ -55,7 +55,7 @@ spring:
             process-in-0:  
                 consumer:
                     enableDlq: true
-                    dlqName: inboundtopic.dlq
+                    dlqName: inboundtopic.DLT
                     autoCommitOnError: true
                     configuration:
                         isolation.level: read_committed                        

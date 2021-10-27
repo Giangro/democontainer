@@ -5,10 +5,8 @@
  */
 package it.poste.democontainer.config;
 
-import it.poste.democontainer.service.ConsumerForProducerTransactionService;
 import java.util.Collection;
 import java.util.Map;
-import java.util.function.Function;
 import javax.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.Consumer;
@@ -16,14 +14,22 @@ import org.apache.kafka.clients.producer.ProducerInterceptor;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.TopicPartition;
+import org.springframework.cloud.stream.binder.BinderFactory;
 import org.springframework.cloud.stream.binder.kafka.KafkaBindingRebalanceListener;
+import org.springframework.cloud.stream.binder.kafka.KafkaMessageChannelBinder;
 import org.springframework.cloud.stream.config.ListenerContainerCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.integration.annotation.ServiceActivator;
+import org.springframework.kafka.core.KafkaOperations;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.core.ProducerFactory;
 import org.springframework.kafka.listener.AbstractMessageListenerContainer;
+import org.springframework.kafka.listener.DeadLetterPublishingRecoverer;
 import org.springframework.kafka.listener.DefaultAfterRollbackProcessor;
+import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.support.ErrorMessage;
 import org.springframework.retry.annotation.EnableRetry;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -40,8 +46,8 @@ import org.springframework.util.backoff.FixedBackOff;
 @EnableScheduling
 @EnableRetry
 @Slf4j
-public class Config {   
-        
+public class Config {
+
     @Bean
     KafkaBindingRebalanceListener kafkaBindingRebalanceListener() {
         return new KafkaBindingRebalanceListener() {
@@ -64,18 +70,30 @@ public class Config {
         };
     }
 
+    public KafkaOperations<byte[], byte[]> recoverTemplate(BinderFactory binders) {
+        ProducerFactory<byte[], byte[]> pf = ((KafkaMessageChannelBinder) binders.getBinder(null,
+                MessageChannel.class)).getTransactionalProducerFactory();
+        return new KafkaTemplate<>(pf);
+    }
+
     @Bean
-    public ListenerContainerCustomizer<AbstractMessageListenerContainer<byte[], byte[]>> customizer() {
-        // Disable retry in the AfterRollbackProcessor
-        return (container, destination, group) -> container.setAfterRollbackProcessor(
-                new DefaultAfterRollbackProcessor<byte[], byte[]>(
-                        (record, exception) -> log.error("Discarding failed record: {}", record),
-                        new FixedBackOff(3_000L, 3)));
-    }     
+    public ListenerContainerCustomizer<AbstractMessageListenerContainer<?, ?>> customizer(BinderFactory binders,
+            GenericApplicationContext ctx) {
+
+        return (container, dest, group) -> {
+            ctx.registerBean("recoverTemplate", KafkaOperations.class, () -> recoverTemplate(binders));
+            @SuppressWarnings("unchecked")
+            KafkaOperations<byte[], byte[]> recoverTemplate = ctx.getBean("recoverTemplate", KafkaOperations.class);
+            container.setAfterRollbackProcessor(new DefaultAfterRollbackProcessor<>(
+                    new DeadLetterPublishingRecoverer(recoverTemplate,
+                            (cr, e) -> new TopicPartition("inboundtopic.DLT", -1)),
+                    new FixedBackOff(3000L, 3L), recoverTemplate, true));
+        };
+    }
 
     @ServiceActivator(inputChannel = "outboundtopic.errors")
     public void errorProcessHandler(ErrorMessage em) {
-        log.error("@@@@@@@@@@@@@@@@ errorProcessHandler {}", em.toString());        
+        log.error("@@@@@@@@@@@@@@@@ errorProcessHandler {}", em.toString());
     }
 
     @ServiceActivator(inputChannel = "inboundtopic.errors")
@@ -105,7 +123,7 @@ public class Config {
     }
 
     @PostConstruct
-    public void init() {      
+    public void init() {
     }
-    
+
 }

@@ -25,7 +25,7 @@ public class ConsumerForProducerTransactionService {
     
     public ConsumerForProducerTransactionService(StreamBridge streambridge) {
         streamBridge = streambridge;
-        raiseException = true;
+        raiseException = false;
     }
     
     @Bean
@@ -43,7 +43,7 @@ public class ConsumerForProducerTransactionService {
         }
         log.info("Message handled={}", msg);        
         streamBridge.send("process-out-0", msg.toUpperCase());
-        if ("HELLO WORLD! #1".equals(msg.toUpperCase()) && raiseException == true) {
+        if ("HELLO WORLD! #2".equals(msg.toUpperCase()) && raiseException == true) {
                 raiseException = false;
                 log.error("throw run time exception for {}", msg.toUpperCase());
                 throw new RuntimeException("!!!!!! Simulate exception for:" + msg.toUpperCase());
