@@ -70,6 +70,8 @@ public class Config {
         };
     }
 
+    // https://github.com/spring-cloud/spring-cloud-stream-binder-kafka/issues/946
+    
     public KafkaOperations<byte[], byte[]> recoverTemplate(BinderFactory binders) {
         ProducerFactory<byte[], byte[]> pf = ((KafkaMessageChannelBinder) binders.getBinder(null,
                 MessageChannel.class)).getTransactionalProducerFactory();
