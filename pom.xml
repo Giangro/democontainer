@@ -10,7 +10,7 @@
     </parent>
     <groupId>it.poste</groupId>
     <artifactId>democontainer</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.5-SNAPSHOT</version>
     <name>democontainer</name>
     <description>Demo project for Spring Boot</description>
     <properties>
