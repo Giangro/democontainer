@@ -86,10 +86,15 @@ public class Config {
             ctx.registerBean("recoverTemplate", KafkaOperations.class, () -> recoverTemplate(binders));
             @SuppressWarnings("unchecked")
             KafkaOperations<byte[], byte[]> recoverTemplate = ctx.getBean("recoverTemplate", KafkaOperations.class);
-            container.setAfterRollbackProcessor(new DefaultAfterRollbackProcessor<>(
+            DefaultAfterRollbackProcessor defaultAfterRollbackProcessor =
+                    new DefaultAfterRollbackProcessor<>(
                     new DeadLetterPublishingRecoverer(recoverTemplate,
                             (cr, e) -> new TopicPartition("inboundtopic.DLT", -1)),
-                    new FixedBackOff(3000L, 3L), recoverTemplate, true));
+                    new FixedBackOff(3000L, 3L), recoverTemplate, true);
+            
+            // add here not retryable exceptions
+            defaultAfterRollbackProcessor.addNotRetryableExceptions(IllegalStateException.class);                        
+            container.setAfterRollbackProcessor(defaultAfterRollbackProcessor);
         };
     }
 
