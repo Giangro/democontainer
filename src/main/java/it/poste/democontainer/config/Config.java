@@ -72,6 +72,7 @@ public class Config {
 
     // https://github.com/spring-cloud/spring-cloud-stream-binder-kafka/issues/946
     
+    @Bean
     public KafkaOperations<byte[], byte[]> recoverTemplate(BinderFactory binders) {
         ProducerFactory<byte[], byte[]> pf = ((KafkaMessageChannelBinder) binders.getBinder(null,
                 MessageChannel.class)).getTransactionalProducerFactory();
@@ -82,14 +83,19 @@ public class Config {
     public ListenerContainerCustomizer<AbstractMessageListenerContainer<?, ?>> customizer(BinderFactory binders,
             GenericApplicationContext ctx) {
 
-        return (container, dest, group) -> {
-            ctx.registerBean("recoverTemplate", KafkaOperations.class, () -> recoverTemplate(binders));
+        return (container, dest, group) -> {            
+            //ctx.registerBean("recoverTemplate", KafkaOperations.class, () -> recoverTemplate(binders));
             @SuppressWarnings("unchecked")
             KafkaOperations<byte[], byte[]> recoverTemplate = ctx.getBean("recoverTemplate", KafkaOperations.class);
-            container.setAfterRollbackProcessor(new DefaultAfterRollbackProcessor<>(
+            DefaultAfterRollbackProcessor defaultAfterRollbackProcessor =
+                    new DefaultAfterRollbackProcessor<>(
                     new DeadLetterPublishingRecoverer(recoverTemplate,
                             (cr, e) -> new TopicPartition("inboundtopic.DLT", -1)),
-                    new FixedBackOff(3000L, 3L), recoverTemplate, true));
+                    new FixedBackOff(3000L, 3L), recoverTemplate, true);
+            
+            // add here not retryable exceptions           
+            defaultAfterRollbackProcessor.addNotRetryableExceptions(IllegalStateException.class);                        
+            container.setAfterRollbackProcessor(defaultAfterRollbackProcessor);
         };
     }
 
