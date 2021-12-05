@@ -52,49 +52,76 @@ public class Config {
     KafkaBindingRebalanceListener kafkaBindingRebalanceListener() {
         return new KafkaBindingRebalanceListener() {
             @Override
-            public void onPartitionsRevokedBeforeCommit(String bindingName, Consumer<?, ?> consumer, Collection<TopicPartition> partitions) {
-                KafkaBindingRebalanceListener.super.onPartitionsRevokedBeforeCommit(bindingName, consumer, partitions); //To change body of generated methods, choose Tools | Templates.                                
+            public void onPartitionsRevokedBeforeCommit(
+                    String bindingName,
+                    Consumer<?, ?> consumer,
+                    Collection<TopicPartition> partitions) {
+                KafkaBindingRebalanceListener.super.onPartitionsRevokedBeforeCommit(
+                        bindingName,
+                        consumer,
+                        partitions); // To change body of generated methods, choose Tools | Templates.
             }
 
             @Override
-            public void onPartitionsRevokedAfterCommit(String bindingName, Consumer<?, ?> consumer, Collection<TopicPartition> partitions) {
-                KafkaBindingRebalanceListener.super.onPartitionsRevokedAfterCommit(bindingName, consumer, partitions); //To change body of generated methods, choose Tools | Templates.
+            public void onPartitionsRevokedAfterCommit(
+                    String bindingName,
+                    Consumer<?, ?> consumer,
+                    Collection<TopicPartition> partitions) {
+                KafkaBindingRebalanceListener.super.onPartitionsRevokedAfterCommit(
+                        bindingName,
+                        consumer,
+                        partitions); // To change body of generated methods, choose Tools | Templates.
             }
 
             @Override
-            public void onPartitionsAssigned(String bindingName, Consumer<?, ?> consumer, Collection<TopicPartition> partitions, boolean initial) {
+            public void onPartitionsAssigned(
+                    String bindingName,
+                    Consumer<?, ?> consumer,
+                    Collection<TopicPartition> partitions,
+                    boolean initial) {
                 log.info("partition assigned = {}", partitions.toString());
-                KafkaBindingRebalanceListener.super.onPartitionsAssigned(bindingName, consumer, partitions, initial); //To change body of generated methods, choose Tools | Templates.
+                KafkaBindingRebalanceListener.super.onPartitionsAssigned(
+                        bindingName,
+                        consumer,
+                        partitions,
+                        initial); // To change body of generated methods, choose Tools | Templates.
             }
-
         };
     }
 
     // https://github.com/spring-cloud/spring-cloud-stream-binder-kafka/issues/946
-    
+
     @Bean
-    public KafkaOperations<byte[], byte[]> recoverTemplate(BinderFactory binders) {
-        ProducerFactory<byte[], byte[]> pf = ((KafkaMessageChannelBinder) binders.getBinder(null,
+    public KafkaOperations<byte[], byte[]> recoverTemplate(
+            BinderFactory binders) {
+        ProducerFactory<byte[], byte[]> pf = ((KafkaMessageChannelBinder) binders.getBinder(
+                null,
                 MessageChannel.class)).getTransactionalProducerFactory();
         return new KafkaTemplate<>(pf);
     }
 
     @Bean
-    public ListenerContainerCustomizer<AbstractMessageListenerContainer<?, ?>> customizer(BinderFactory binders,
+    public ListenerContainerCustomizer<AbstractMessageListenerContainer<?, ?>> customizer(
+            BinderFactory binders,
             GenericApplicationContext ctx) {
-
-        return (container, dest, group) -> {            
-            //ctx.registerBean("recoverTemplate", KafkaOperations.class, () -> recoverTemplate(binders));
+        return (container, dest, group) -> {
+            // ctx.registerBean("recoverTemplate", KafkaOperations.class, () ->
+            // recoverTemplate(binders));
             @SuppressWarnings("unchecked")
-            KafkaOperations<byte[], byte[]> recoverTemplate = ctx.getBean("recoverTemplate", KafkaOperations.class);
-            DefaultAfterRollbackProcessor<? super Object,? super Object> defaultAfterRollbackProcessor =
-                    new DefaultAfterRollbackProcessor<>(
-                    new DeadLetterPublishingRecoverer(recoverTemplate,
+            KafkaOperations<byte[], byte[]> recoverTemplate = ctx.getBean(
+                    "recoverTemplate",
+                    KafkaOperations.class);
+            DefaultAfterRollbackProcessor<? super Object, ? super Object> defaultAfterRollbackProcessor = new DefaultAfterRollbackProcessor<>(
+                    new DeadLetterPublishingRecoverer(
+                            recoverTemplate,
                             (cr, e) -> new TopicPartition("inboundtopic.DLT", -1)),
-                    new FixedBackOff(3000L, 3L), recoverTemplate, true);
-            
-            // add here not retryable exceptions           
-            defaultAfterRollbackProcessor.addNotRetryableExceptions(IllegalStateException.class);                        
+                    new FixedBackOff(3000L, 3L),
+                    recoverTemplate,
+                    true);
+
+            // add here not retryable exceptions
+            defaultAfterRollbackProcessor.addNotRetryableExceptions(
+                    IllegalStateException.class);
             container.setAfterRollbackProcessor(defaultAfterRollbackProcessor);
         };
     }
@@ -109,29 +136,31 @@ public class Config {
         log.error("@@@@@@@@@@@@@@@@ errorSupplierHandler {}", em.toString());
     }
 
-    public static class DefaultProducerInterceptor implements ProducerInterceptor<byte[], byte[]> {
+    public static class DefaultProducerInterceptor
+            implements ProducerInterceptor<byte[], byte[]> {
 
         @Override
         public void configure(Map<String, ?> configs) {
         }
 
         @Override
-        public ProducerRecord<byte[], byte[]> onSend(ProducerRecord<byte[], byte[]> record) {
+        public ProducerRecord<byte[], byte[]> onSend(
+                ProducerRecord<byte[], byte[]> record) {
             return record;
         }
 
         @Override
-        public void onAcknowledgement(RecordMetadata metadata, Exception exception) {
+        public void onAcknowledgement(
+                RecordMetadata metadata,
+                Exception exception) {
         }
 
         @Override
         public void close() {
         }
-
     }
 
     @PostConstruct
     public void init() {
     }
-
 }

@@ -24,17 +24,15 @@ public class MessageScheduler {
 
     public MessageScheduler(MessageSenderService messagesenderservice) {
         messageSenderService = messagesenderservice;
-        messageCounter
-                = new AtomicInteger(0);
+        messageCounter = new AtomicInteger(0);
     }
 
-    @Scheduled(fixedDelayString = "${app.schedule.fixedDelay}",
-            initialDelayString = "${app.schedule.initialDelay}")
+    @Scheduled(fixedDelayString = "${app.schedule.fixedDelay}", initialDelayString = "${app.schedule.initialDelay}")
     public void sendScheduledMessage() {
         log.info("Start scheduled task...");
         String message = "Hello World! #" + messageCounter.incrementAndGet();
-        messageSenderService.sendMessage("supplier-out-0",message);
+        messageSenderService.sendMessage("supplier-out-0", message);
         log.info("Scheduled task...handled {}", message);
     }
-    
+
 }

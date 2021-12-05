@@ -19,14 +19,13 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class MessageSenderService {
 
-    private StreamBridge streamBridge;    
+    private StreamBridge streamBridge;
 
     public MessageSenderService(StreamBridge streambridge) {
-        streamBridge = streambridge;        
+        streamBridge = streambridge;
     }
 
-    @Retryable(value = Throwable.class,
-            maxAttempts = 100, backoff = @Backoff(delay = 5_000, multiplier = 1))
+    @Retryable(value = Throwable.class, maxAttempts = 100, backoff = @Backoff(delay = 5_000, multiplier = 1))
     public void sendMessage(String bindings, String message) {
 
         log.info("Sending new message: {}", message);
@@ -36,9 +35,9 @@ public class MessageSenderService {
             throw new RuntimeException("error while sending message:" + message);
         } // if
         else {
-            log.info("Message: {} has been sent", message);  
+            log.info("Message: {} has been sent", message);
         }
-        
+
     }
 
 }

@@ -20,19 +20,19 @@ import org.springframework.transaction.annotation.Transactional;
 @Slf4j
 public class ConsumerForProducerTransactionService {
 
-    private StreamBridge streamBridge;        
+    private StreamBridge streamBridge;
     private Boolean raiseException;
-    
+
     public ConsumerForProducerTransactionService(StreamBridge streambridge) {
         streamBridge = streambridge;
         raiseException = false;
     }
-    
+
     @Bean
     public Consumer<String> process() {
-        return msg->run(msg);
+        return msg -> run(msg);
     }
-    
+
     @Transactional
     public void run(String msg) {
         log.info("Received event={}", msg);
@@ -41,13 +41,13 @@ public class ConsumerForProducerTransactionService {
             Thread.sleep(35_000);
         } catch (InterruptedException ex) {
         }
-        log.info("Message handled={}", msg);        
+        log.info("Message handled={}", msg);
         streamBridge.send("process-out-0", msg.toUpperCase());
         if ("HELLO WORLD! #2".equals(msg.toUpperCase()) && raiseException == true) {
-                raiseException = false;
-                log.error("throw run time exception for {}", msg.toUpperCase());
-                throw new RuntimeException("!!!!!! Simulate exception for:" + msg.toUpperCase());
-       } // if
+            raiseException = false;
+            log.error("throw run time exception for {}", msg.toUpperCase());
+            throw new RuntimeException("!!!!!! Simulate exception for:" + msg.toUpperCase());
+        } // if
     }
 
 }
