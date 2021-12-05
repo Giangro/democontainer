@@ -87,7 +87,7 @@ public class Config {
             //ctx.registerBean("recoverTemplate", KafkaOperations.class, () -> recoverTemplate(binders));
             @SuppressWarnings("unchecked")
             KafkaOperations<byte[], byte[]> recoverTemplate = ctx.getBean("recoverTemplate", KafkaOperations.class);
-            DefaultAfterRollbackProcessor defaultAfterRollbackProcessor =
+            DefaultAfterRollbackProcessor<? super Object,? super Object> defaultAfterRollbackProcessor =
                     new DefaultAfterRollbackProcessor<>(
                     new DeadLetterPublishingRecoverer(recoverTemplate,
                             (cr, e) -> new TopicPartition("inboundtopic.DLT", -1)),
