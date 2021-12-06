@@ -1,37 +1,37 @@
 app:
-    schedule:
-        fixedDelay: 60000
-        initialDelay: 15000
+  schedule:
+    fixedDelay: 60000
+    initialDelay: 15000
 management:
-    endpoint:
-        health:
-            enabled: true
-        info:
-            enabled: true
-        metrics:
-            enabled: true
-        prometheus:
-            enabled: true
-        shutdown:
-            enabled: true           
-    endpoints:
-        web:
-            exposure:
-                include: "*"
+  endpoint:
+    health:
+      enabled: true
+    info:
+      enabled: true
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 server:
   tomcat:
     connection-timeout: -1
-  port : 8080
+  port: 8080
 spring:
   application:
     name: democontainer
     main:
-        banner-mode: off
-        log-startup-info: true
+      banner-mode: off
+      log-startup-info: true
     jackson:
-        deserialization:
-            fail-on-ignored-properties: false
-        default-property-inclusion: non_absent
+      deserialization:
+        fail-on-ignored-properties: false
+      default-property-inclusion: non_absent
 
   cloud:
     stream:
@@ -39,48 +39,48 @@ spring:
       bindings:
         supplier-out-0:
           destination: inboundtopic
-          producer:               
-             errorChannelEnabled: true
+          producer:
+            errorChannelEnabled: true
         process-in-0:
           group: demo-consumer-group
           destination: inboundtopic
           consumer:
-            maxAttempts: 1          
+            maxAttempts: 1
         process-out-0:
           destination: outboundtopic
-          producer:               
-            errorChannelEnabled: true            
+          producer:
+            errorChannelEnabled: true
       kafka:
-        bindings:                    
-            process-in-0:  
-                consumer:
-                    enableDlq: true
-                    dlqName: inboundtopic.DLT
-                    autoCommitOnError: true
-                    configuration:
-                        isolation.level: read_committed                        
-                        max.poll.records: 1
-                        max.poll.interval.ms: 180000           
-        binder:          
+        bindings:
+          process-in-0:
+            consumer:
+              enableDlq: true
+              dlqName: inboundtopic.DLT
+              autoCommitOnError: true
+              configuration:
+                isolation.level: read_committed
+                max.poll.records: 1
+                max.poll.interval.ms: 180000
+        binder:
           brokers: kafka
-          defaultBrokerPort: 9092                    
+          defaultBrokerPort: 9092
           minPartitionCount: 1
           autoCreateTopics: false
-          autoAddPartitions: false            
+          autoAddPartitions: false
           transaction:
             transactionIdPrefix: tx-
             transaction.timeout.ms: 900000
             #transaction.timeout.ms: 1000
-            producer:                         
-                sync: true
-                configuration:                  
-                  enable.idempotence: true
-                  max.in.flight.requests.per.connection: 5
-                  retries: 100
-                  acks: all
-                  max.block.ms: 900000                
-                  interceptor:
-                      classes: it.poste.democontainer.config.Config$DefaultProducerInterceptor                
+            producer:
+              sync: true
+              configuration:
+                enable.idempotence: true
+                max.in.flight.requests.per.connection: 5
+                retries: 100
+                acks: all
+                max.block.ms: 900000
+                interceptor:
+                  classes: it.poste.democontainer.config.Config$DefaultProducerInterceptor
 logging:
   level:
     org.springframework.kafka.transaction: debug
